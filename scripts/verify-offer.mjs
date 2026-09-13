@@ -1,15 +1,77 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
-import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { runInNewContext } from "node:vm";
 import ts from "typescript";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const baseline = "fa24cb4906ff46f8931e3b61d87fead697df3f29";
-const original = (path) =>
-  execFileSync("git", ["show", `${baseline}:${path}`], { cwd: root, encoding: "utf8" });
 const current = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+
+const expectedPlans = [
+  {
+    name: "Impulso",
+    tagline: "El plan más simple para empezar a fidelizar clientes hoy mismo.",
+    priceMonthly: 1499,
+    priceAnnual: 1049,
+    annualYear: 12588,
+    features: [
+      "1 promoción activa",
+      "1 geo-localización (radio 100m)",
+      "1 manager (Scanner App)",
+      "Tarjetas y descargas en Wallet ilimitadas",
+      "Contactos ilimitados",
+      "Notificaciones push ilimitadas gratis",
+      "Control de duplicados",
+      "Analítica en tiempo real",
+      "Soporte 24/7",
+    ],
+    popular: false,
+  },
+  {
+    name: "Turbo",
+    tagline: "El equilibrio perfecto entre potencia y precio para crecer sin frenos.",
+    priceMonthly: 2199,
+    priceAnnual: 1549,
+    annualYear: 18588,
+    features: [
+      "3 promociones activas",
+      "3 geo-localizaciones",
+      "10 managers (Scanner App)",
+      "Tarjetas y descargas en Wallet ilimitadas",
+      "Contactos ilimitados",
+      "Notificaciones push ilimitadas gratis",
+      "Control de duplicados",
+      "Analítica en tiempo real",
+      "Campos personalizados en tus tarjetas",
+      "Programa de referidos automatizado",
+      "Reseñas de Google automáticas",
+      "Soporte 24/7",
+    ],
+    popular: true,
+  },
+  {
+    name: "Cohete",
+    tagline: "Máxima potencia de fidelización, para negocios que ya piensan en grande.",
+    priceMonthly: 4399,
+    priceAnnual: 3049,
+    annualYear: 36588,
+    features: [
+      "10 promociones activas simultáneas",
+      "10 geo-localizaciones",
+      "50 managers (Scanner App)",
+      "Todo lo anterior, ilimitado",
+      "Campos personalizados en tus tarjetas",
+      "Programa de referidos automatizado",
+      "Reseñas de Google automáticas",
+      "Recuperación automática de clientes inactivos",
+      "Conexión API con tu propio software",
+      "Soporte prioritario 24/7",
+    ],
+    popular: false,
+  },
+];
+const expectedPaletteHash = "816bacafc37d285d16456e46dbb2413f90ec3c3f8251802a9285c30e97e403f1";
 
 function readPlans(source) {
   const ast = ts.createSourceFile(
@@ -34,12 +96,11 @@ function readPlans(source) {
   return JSON.parse(runInNewContext(expression, {}, { timeout: 1000 }));
 }
 
-const before = readPlans(original("src/routes/index.tsx"));
 const after = readPlans(current("src/lib/lealtio-offer.ts"));
 assert.deepEqual(
   after,
-  before,
-  "Todos los precios, nombres y prestaciones deben conservarse exactamente",
+  expectedPlans,
+  "Los precios, nombres y prestaciones deben conservarse exactamente",
 );
 assert.deepEqual(
   after.map((p) => p.priceMonthly * 12 - p.annualYear),
@@ -55,13 +116,20 @@ function palette(source) {
     .filter(([, name]) => !name.startsWith("--font-"))
     .map(([, name, value]) => [
       name,
-      value.trim().replace(/\s+/g, " ").replace(/\(\s+/g, "(").replace(/\s+\)/g, ")").replace(/\s*,\s*/g, ","),
+      value
+        .trim()
+        .replace(/\s+/g, " ")
+        .replace(/\(\s+/g, "(")
+        .replace(/\s+\)/g, ")")
+        .replace(/\s*,\s*/g, ","),
     ]);
 }
-assert.deepEqual(
-  palette(current("src/styles.css")),
-  palette(original("src/styles.css")),
-  "La paleta original debe conservarse",
+assert.equal(
+  createHash("sha256")
+    .update(JSON.stringify(palette(current("src/styles.css"))))
+    .digest("hex"),
+  expectedPaletteHash,
+  "La paleta aprobada debe conservarse",
 );
 
 const page = current("src/components/sales-page.tsx");

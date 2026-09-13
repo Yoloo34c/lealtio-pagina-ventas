@@ -1,4 +1,4 @@
-// Precios y prestaciones conservados de la oferta original, commit fa24cb4.
+// Precios y prestaciones aprobados; scripts/verify-offer.mjs protege esta referencia.
 export const PLANS = [
   {
     name: "Impulso",
