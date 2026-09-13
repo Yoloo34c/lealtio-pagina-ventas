@@ -1,0 +1,299 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "./sales.css";
+@import "./sales-visuals.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-brand-purple: #7b2ff7;
+  --color-brand-violet: #5a4cf5;
+  --color-brand-blue: #2f80ff;
+  --color-brand-cyan: #17c9ff;
+  --color-ink: #0f1117;
+  --color-paper: #f5f6fa;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: #ffffff;
+  --foreground: #0f1117;
+  --card: #ffffff;
+  --card-foreground: #0f1117;
+  --popover: #ffffff;
+  --popover-foreground: #0f1117;
+  --primary: #5a4cf5;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f6fa;
+  --secondary-foreground: #0f1117;
+  --muted: #f5f6fa;
+  --muted-foreground: #55586a;
+  --accent: #eef0ff;
+  --accent-foreground: #0f1117;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #ffffff;
+  --border: #e6e8f0;
+  --input: #e6e8f0;
+  --ring: #7b2ff7;
+
+  --gradient-brand: linear-gradient(135deg, #7b2ff7 0%, #5a4cf5 35%, #2f80ff 70%, #17c9ff 100%);
+  --gradient-brand-soft: linear-gradient(
+    135deg,
+    rgba(123, 47, 247, 0.12),
+    rgba(23, 201, 255, 0.12)
+  );
+  --shadow-glow: 0 20px 60px -20px rgba(90, 76, 245, 0.55);
+  --shadow-card: 0 20px 40px -24px rgba(15, 17, 23, 0.15);
+  --shadow-soft: 0 4px 20px -8px rgba(15, 17, 23, 0.08);
+}
+
+.dark {
+  --background: #0f1117;
+  --foreground: #f5f6fa;
+  --card: #171a24;
+  --card-foreground: #f5f6fa;
+  --popover: #171a24;
+  --popover-foreground: #f5f6fa;
+  --primary: #7b2ff7;
+  --primary-foreground: #ffffff;
+  --secondary: #1c1f2b;
+  --secondary-foreground: #f5f6fa;
+  --muted: #1c1f2b;
+  --muted-foreground: #9096ab;
+  --accent: #1c1f2b;
+  --accent-foreground: #f5f6fa;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #17c9ff;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--gradient-brand);
+}
+
+@utility text-brand-gradient {
+  background-image: var(--gradient-brand);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-brand-soft {
+  background-image: var(--gradient-brand-soft);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: #ffffff;
+  background-image: var(--gradient-brand);
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  box-shadow: var(--shadow-glow);
+  transition:
+    background-position 0.5s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  white-space: normal;
+}
+
+@utility btn-primary-hover {
+  &:hover {
+    background-position: 100% 50%;
+    transform: translateY(-1px);
+    box-shadow: 0 25px 70px -20px rgba(23, 201, 255, 0.6);
+  }
+}
+
+@utility btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: var(--color-foreground);
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+@utility fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+@utility animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+@keyframes float-slower {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@utility animate-float-slower {
+  animation: float-slower 9s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.9s ease-out both;
+}
+
+@keyframes shimmer-card {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+@utility animate-shimmer-card {
+  animation: shimmer-card 4.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes social-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@utility animate-social-float {
+  animation: social-float 4s ease-in-out infinite;
+}
