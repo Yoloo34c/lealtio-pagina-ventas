@@ -24,10 +24,16 @@ import avatar5 from "@/assets/avatars/avatar-5.webp";
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
 
-function TrialLink({ className = "" }: { className?: string }) {
+function TrialLink({
+  className = "",
+  label = "Probar 14 días gratis",
+}: {
+  className?: string;
+  label?: string;
+}) {
   return (
     <a className={`sales-cta ${className}`} href="#planes">
-      Probar 14 días gratis <ArrowRight aria-hidden="true" size={19} />
+      {label} <ArrowRight aria-hidden="true" size={19} />
     </a>
   );
 }
@@ -611,22 +617,21 @@ export default function SalesPage() {
         <section className="sales-wrap sales-hero" aria-labelledby="hero-title">
           <div className="sales-hero-copy">
             <p className="sales-eyebrow">
-              <span /> PARA NEGOCIOS QUE NO QUIEREN VOLVER A EMPEZAR DE CERO
+              <span /> YA HICISTE LO MÁS DIFÍCIL: CONSEGUIR QUE ENTRE
             </p>
             <h1 id="hero-title">
-              Haz que la compra de hoy <em>abra la puerta a la siguiente.</em>
+              Que el cliente que te costó tiempo y dinero
+              <em> no te compre una vez y desaparezca.</em>
             </h1>
             <p className="sales-hero-lead">
-              Ya invertiste tiempo, atención y dinero en conseguirlo.{" "}
-              <strong>Que no te compre una vez y desaparezca.</strong>
+              Dale una razón visible para volver antes de que termine comprando en otro lugar.
             </p>
             <p className="sales-hero-description">
-              Lealtio pone en su celular una tarjeta digital con tu marca. Cada compra lo acerca a
-              un premio y tú puedes invitarlo a volver cuando quieras, sin depender de que se
-              acuerde de ti por casualidad.
+              Lealtio deja en su celular tu marca, su avance y el premio que puede ganar; y tú
+              puedes invitarlo a regresar cuando quieras.
             </p>
             <div className="sales-hero-actions">
-              <TrialLink />
+              <TrialLink label="Quiero que vuelvan a comprar" />
               <a className="sales-text-link" href="#como-funciona">
                 Así funciona <ArrowRight size={17} aria-hidden="true" />
               </a>
