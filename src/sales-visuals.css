@@ -621,7 +621,7 @@
   align-items: center;
   gap: clamp(42px, 5vw, 68px);
   padding: clamp(42px, 5vw, 64px);
-  margin-top: 55px;
+  margin: 55px auto clamp(36px, 4vw, 52px);
   border: 1px solid #e2d9f5;
   border-radius: 30px;
   background: linear-gradient(135deg, #faf9ff, #f3efff);
@@ -1001,18 +1001,6 @@
   right: 0;
   color: #ffffff70;
 }
-.lv2-scene-caption {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 10px;
-  color: #77707f;
-}
-.lv2-notification-scene .lv2-scene-caption {
-  display: none;
-}
 .lv2-map {
   position: absolute;
   left: 0;
@@ -1118,11 +1106,6 @@
 }
 .lv2-geo-phone .lv2-notification {
   margin-top: 29px;
-}
-.lv2-proximity-scene .lv2-scene-caption {
-  left: 20px;
-  right: auto;
-  bottom: 30px;
 }
 .lv2-activity-scene {
   background: #f4f6fc;
@@ -1469,6 +1452,23 @@
     margin-inline: auto;
   }
 }
+@media (max-width: 900px) {
+  .lv2-step {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 20px;
+  }
+  .lv2-step:nth-child(2) .lv2-step-copy {
+    order: 0;
+  }
+  .lv2-step-copy {
+    max-width: 680px;
+  }
+  .lv2-step .lv2-scene {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+}
 @media (max-width: 760px) {
   .lv2-notification-scene,
   .lv2-referral-scene {
@@ -1600,6 +1600,7 @@
   .lv2-familiar {
     padding: 30px 22px 24px;
     margin-top: 50px;
+    margin-bottom: 34px;
     gap: 28px;
     border-radius: 23px;
   }

@@ -555,9 +555,6 @@ function NotificationScene({ returning = false }: { returning?: boolean }) {
           <span>●</span>
         </div>
       </Phone>
-      <span className="lv2-scene-caption">
-        Ejemplo de {returning ? "recordatorio automático" : "notificación push"}
-      </span>
     </Scene>
   );
 }
@@ -592,7 +589,6 @@ function ProximityScene() {
           <p>Pasa por Bruma y sigue sumando hacia tu recompensa.</p>
         </div>
       </Phone>
-      <span className="lv2-scene-caption">Ejemplo de aviso por cercanía</span>
     </Scene>
   );
 }
@@ -680,7 +676,6 @@ function ReferralScene() {
           </div>
         </div>
       </Phone>
-      <span className="lv2-scene-caption">Ejemplo de invitación por referido</span>
     </Scene>
   );
 }

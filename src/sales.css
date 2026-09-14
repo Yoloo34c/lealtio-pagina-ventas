@@ -505,6 +505,7 @@
 .sales-examples {
   background: var(--secondary);
   border-top: 1px solid var(--border);
+  padding-top: clamp(44px, 4.5vw, 64px);
 }
 .sales-example-tabs {
   margin-top: 34px;
@@ -1255,13 +1256,40 @@
     margin-inline: 8px;
   }
 }
+@media (max-width: 900px) {
+  #repeat-title,
+  #familiar-title {
+    scroll-margin-top: 150px;
+  }
+  .sales-nav nav {
+    display: none;
+  }
+  .sales-hero {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .sales-hero-copy {
+    max-width: 720px;
+  }
+  .sales-hero-visual {
+    width: min(100%, 640px);
+    margin-inline: auto;
+  }
+  .sales-repeat {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .sales-repeat > div:first-child {
+    max-width: 720px;
+  }
+}
 @media (max-width: 760px) {
   .sales-page :is(section, [id]) {
     scroll-margin-top: 70px;
   }
   #repeat-title,
   #familiar-title {
-    scroll-margin-top: 112px;
+    scroll-margin-top: 142px;
   }
   .sales-wrap {
     width: calc(100% - 40px);
