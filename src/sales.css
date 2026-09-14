@@ -12,7 +12,11 @@
   outline-offset: 5px;
 }
 .sales-page :is(section, [id]) {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 86px;
+}
+#repeat-title,
+#familiar-title {
+  scroll-margin-top: 126px;
 }
 .sales-wrap {
   width: min(1200px, calc(100% - 96px));
@@ -100,10 +104,10 @@
   align-items: center;
   gap: 8px;
   color: var(--primary);
-  font-size: 0.75rem;
-  line-height: 1.6;
+  font-size: 0.875rem;
+  line-height: 1.5;
   font-weight: 800;
-  letter-spacing: 0.115em;
+  letter-spacing: 0.075em;
 }
 .sales-eyebrow > span {
   width: 7px;
@@ -154,11 +158,22 @@
 .sales-text-link:hover {
   text-decoration: underline;
 }
-.sales-fine {
-  font-size: 0.75rem;
-  line-height: 1.6;
+.sales-hero-reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 16px;
   color: var(--muted-foreground);
-  margin-top: 13px;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+.sales-hero-reassurance span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.sales-hero-reassurance svg {
+  color: var(--primary);
 }
 .sales-social {
   display: flex;
@@ -306,7 +321,7 @@
 .sales-repeat {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  align-items: center;
+  align-items: stretch;
   gap: clamp(30px, 5vw, 72px);
   padding-top: var(--sales-space);
 }
@@ -316,7 +331,7 @@
 .sales-repeat h2 span {
   color: var(--primary);
 }
-.sales-repeat-pain > p:last-child,
+.sales-repeat-pain > p:not(.sales-eyebrow),
 .sales-repeat-opportunity > p:not(.sales-eyebrow) {
   color: var(--muted-foreground);
   font-size: 1rem;
@@ -324,11 +339,49 @@
   margin-top: 19px;
   max-width: 510px;
 }
+.sales-pain-path,
+.sales-hope-path {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  line-height: 1.35;
+}
+.sales-pain-path > span,
+.sales-pain-path > strong {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 12px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #f7f7fa;
+  color: #525767;
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+.sales-pain-path > strong {
+  background: #f3eeff;
+  color: #332047;
+}
+.sales-pain-path small {
+  display: block;
+  margin-bottom: 4px;
+  color: #7b2ff7;
+  font-size: 0.61rem;
+  letter-spacing: 0.08em;
+}
+.sales-pain-path > svg {
+  flex: none;
+  color: #a8a1b4;
+}
 .sales-repeat-opportunity {
-  border-left: 3px solid var(--primary);
-  padding: 30px 32px;
-  background: var(--secondary);
-  border-radius: 0 18px 18px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #e2d9f5;
+  padding: clamp(28px, 4vw, 45px);
+  background: linear-gradient(135deg, #f3eeff, #faf9ff);
+  border-radius: 24px;
 }
 .sales-repeat-opportunity h3 {
   font-size: clamp(1.4rem, 2.1vw, 1.75rem);
@@ -341,6 +394,18 @@
 .sales-repeat-opportunity .sales-text-link {
   margin-top: 22px;
   color: var(--primary);
+}
+.sales-hope-path {
+  flex-wrap: wrap;
+  gap: 7px;
+  color: #60596a;
+  font-size: 0.74rem;
+}
+.sales-hope-path svg {
+  color: #7b2ff7;
+}
+.sales-hope-path strong {
+  color: #5a27bd;
 }
 .sales-how-grid {
   display: grid;
@@ -1191,6 +1256,13 @@
   }
 }
 @media (max-width: 760px) {
+  .sales-page :is(section, [id]) {
+    scroll-margin-top: 70px;
+  }
+  #repeat-title,
+  #familiar-title {
+    scroll-margin-top: 112px;
+  }
   .sales-wrap {
     width: calc(100% - 40px);
   }
@@ -1229,8 +1301,8 @@
     max-width: 620px;
   }
   .sales-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.07em;
+    font-size: 0.8125rem;
+    letter-spacing: 0.055em;
   }
   .sales-hero-actions {
     align-items: stretch;
@@ -1339,6 +1411,19 @@
   }
   .sales-repeat-opportunity {
     padding: 25px;
+  }
+  .sales-pain-path {
+    display: grid;
+    grid-template-columns: 1fr 22px 1fr 22px 1fr;
+    gap: 5px;
+  }
+  .sales-pain-path > span,
+  .sales-pain-path > strong {
+    padding: 11px 8px;
+    font-size: 0.68rem;
+  }
+  .sales-pain-path > svg {
+    width: 15px;
   }
   .sales-how-grid {
     grid-template-columns: 1fr;

@@ -1,5 +1,7 @@
 # Lealtio: del problema reconocido a la decisión de probar
 
+> **Documento histórico.** La investigación ampliada con siete libros, la página anterior y las páginas competidoras, junto con la estrategia que usa la versión vigente, está en [Lealtio: investigación de copy y conversión](./investigacion-copy-conversion-2026.md).
+
 Revisión del 9 de septiembre de 2026. Esta versión responde al comentario de que el copy anterior era débil y suponía demasiado conocimiento sobre fidelización. Reemplaza su enfoque comercial; conserva la oferta y las precisiones de producto del [diagnóstico original](./diagnostico-conversion.md).
 
 ## La decisión central

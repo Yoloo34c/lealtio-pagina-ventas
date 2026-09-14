@@ -36,24 +36,49 @@ function RepeatPurchase() {
   return (
     <section className="sales-wrap sales-repeat" aria-labelledby="repeat-title">
       <div className="sales-repeat-pain">
-        <p className="sales-eyebrow">¿TE PASA?</p>
+        <p className="sales-eyebrow">EL PROBLEMA NO TERMINA CUANDO EL CLIENTE SE VA</p>
         <h2 id="repeat-title">
-          El negocio está flojo.
+          Ya pagaste por atraerlo.
           <br />
-          <span>Los gastos siguen corriendo.</span>
+          <span>Pero solo te compró una vez.</span>
         </h2>
         <p>
-          La renta no espera. Los sueldos tampoco. Publicas otra promoción y vuelves a preguntarte
-          dónde están los clientes que ya te compraron.
+          Lo encontraste, lo convenciste y lo atendiste bien. Después salió por la puerta y
+          desapareció de tu radar. Mientras tanto, la renta y los sueldos siguen corriendo, aunque
+          el negocio esté flojo.
         </p>
+        <div
+          className="sales-pain-path"
+          aria-label="Lo que ocurre cuando la relación termina al cobrar"
+        >
+          <span>
+            <small>HOY</small>Te compra
+          </span>
+          <ArrowRight size={18} aria-hidden="true" />
+          <span>
+            <small>DESPUÉS</small>Pierdes el contacto
+          </span>
+          <ArrowRight size={18} aria-hidden="true" />
+          <strong>
+            <small>PRÓXIMA COMPRA</small>Vuelve a elegir desde cero
+          </strong>
+        </div>
       </div>
       <div className="sales-repeat-opportunity">
-        <p className="sales-eyebrow">EMPIEZA POR QUIENES YA TE CONOCEN</p>
-        <h3>Ya te costó traerlos. Que no todo termine al cobrar.</h3>
+        <p className="sales-eyebrow">NO TIENES QUE CONQUISTARLO OTRA VEZ DESDE CERO</p>
+        <h3>La siguiente venta puede empezar con alguien que ya confía en ti.</h3>
         <p>
-          Su próxima compra podría ser contigo. Dales un premio que quieran ganar, recuérdales que
-          los esperas y deja de depender de que vuelvan por casualidad.
+          Lealtio deja en su celular una razón visible para volver: tu marca, su avance y el premio
+          que puede ganar si sigue comprándote. Y cuando quieras traerlo de regreso, tienes cómo
+          recordarle que lo esperas.
         </p>
+        <div className="sales-hope-path">
+          <span>Compra hoy</span>
+          <ArrowRight size={16} aria-hidden="true" />
+          <span>Ve lo que puede ganar</span>
+          <ArrowRight size={16} aria-hidden="true" />
+          <strong>Tiene una razón para volver</strong>
+        </div>
         <a className="sales-text-link" href="#como-funciona">
           Mira cómo lo harías <ArrowRight size={17} aria-hidden="true" />
         </a>
@@ -65,38 +90,37 @@ function RepeatPurchase() {
 const COMPARISON = [
   {
     without: "Te cuesta tiempo y dinero conseguir un cliente. Te compra una vez y desaparece.",
-    outcome: "Haz que conseguirlo valga más.",
-    withLealtio: "Dale motivos para repetir, para que tu esfuerzo no termine en una sola venta.",
+    withLealtio:
+      "La compra de hoy deja una razón para volver. El esfuerzo de atraerlo puede abrirte una segunda, tercera y cuarta venta.",
   },
   {
     without: "Miras el negocio vacío mientras la renta y los sueldos siguen corriendo.",
-    outcome: "Ten a quién acudir en un día flojo.",
     withLealtio:
-      "Ve por la siguiente compra de quienes ya te conocen, en lugar de esperar a que aparezca alguien nuevo.",
-  },
-  {
-    without: "Bajas el precio para llamar la atención. Trabajas igual, pero te queda menos.",
-    outcome: "Cuida lo que ganas en cada venta.",
-    withLealtio: "Da motivos para elegirte sin tener que ofrecer una rebaja cada vez.",
+      "En un día flojo no te quedas mirando la puerta: puedes invitar a volver a quienes ya conocen lo que vendes.",
   },
   {
     without:
-      "Ese cliente que venía seguido deja de aparecer. Pasan las semanas y dejas de venderle.",
-    outcome: "Que una ausencia no sea un cliente perdido.",
-    withLealtio: "Retoma el contacto y abre la puerta a que vuelva a comprarte.",
-  },
-  {
-    without:
-      "Te desvives por atender bien, pero conseguir al próximo cliente vuelve a depender de ti.",
-    outcome: "Que tus clientes te ayuden a traer a los siguientes.",
+      "Bajas el precio para llamar la atención. Trabajas igual, pero ganas menos dinero en cada venta.",
     withLealtio:
-      "Dales motivos para recomendarte y convertir el buen servicio en nuevas oportunidades de venta.",
+      "Tu cliente vuelve por el premio que quiere alcanzar, sin obligarte a poner todo tu negocio en oferta.",
   },
   {
     without:
-      "Pruebas otra promoción. Gastas más tiempo. Sigues sin saber quién vuelve a comprarte.",
-    outcome: "Decide dónde vale la pena poner tu esfuerzo.",
-    withLealtio: "Reconoce quién regresa y qué aprovecha, para dejar de probar a ciegas.",
+      "Ese cliente que venía seguido deja de aparecer. Pasan las semanas y puede terminar comprando en otro lugar.",
+    withLealtio:
+      "Le recuerdas que lo esperas antes de que se enfríe la costumbre de volver a tu negocio.",
+  },
+  {
+    without:
+      "Te desvives por atender bien. Se va feliz, pero su recomendación queda en un “luego les cuento”.",
+    withLealtio:
+      "Le das una forma concreta de invitar a alguien y conviertes su buena experiencia en una nueva oportunidad de venta.",
+  },
+  {
+    without:
+      "Pruebas otra promoción. Gastas más tiempo y dinero. Cuando termina, vuelves al mismo punto.",
+    withLealtio:
+      "Ves las visitas y los canjes registrados para decidir qué repetir y qué dejar de pagar.",
   },
 ] as const;
 
@@ -108,14 +132,15 @@ function Comparison() {
       aria-labelledby="comparison-title"
     >
       <div className="sales-section-heading">
-        <p className="sales-eyebrow">LO QUE QUIERES CAMBIAR EN TU NEGOCIO</p>
+        <p className="sales-eyebrow">DOS MANERAS MUY DISTINTAS DE LLEGAR A LA SIGUIENTE VENTA</p>
         <h2 id="comparison-title">
-          Que cada cliente te deje
+          Seguir empezando de cero
           <br />
-          <span>más que una sola venta.</span>
+          <span>o hacer que cada cliente valga más.</span>
         </h2>
         <p className="sales-intro">
-          Piensa en lo que cambiaría en tu día si más clientes volvieran a elegirte.
+          Ya viste cómo funciona y cuánto cuesta. Ahora mira qué cambia cuando la relación no
+          termina al cobrar.
         </p>
       </div>
       <div className="sales-comparison-frame">
@@ -145,7 +170,7 @@ function Comparison() {
             </tr>
           </thead>
           <tbody>
-            {COMPARISON.map(({ without, outcome, withLealtio }) => (
+            {COMPARISON.map(({ without, withLealtio }) => (
               <tr key={without}>
                 <td>
                   <span className="sales-comparison-mobile">Sin Lealtio</span>
@@ -158,10 +183,7 @@ function Comparison() {
                   <span className="sales-comparison-mobile">Con Lealtio</span>
                   <div>
                     <Check size={19} aria-hidden="true" />
-                    <p>
-                      <strong>{outcome}</strong>
-                      {withLealtio}
-                    </p>
+                    <p>{withLealtio}</p>
                   </div>
                 </td>
               </tr>
@@ -171,7 +193,7 @@ function Comparison() {
       </div>
       <div className="sales-comparison-action">
         <TrialLink />
-        <p>Tu próxima oportunidad está en quienes ya te compraron.</p>
+        <p>La diferencia empieza con la próxima persona que te compre.</p>
       </div>
     </section>
   );
@@ -181,15 +203,15 @@ function HowItWorks() {
   return (
     <section className="sales-wrap sales-section" id="como-funciona" aria-labelledby="how-title">
       <div className="sales-section-heading">
-        <p className="sales-eyebrow">TU NEGOCIO, EN SU PRÓXIMA VISITA</p>
+        <p className="sales-eyebrow">DE UNA COMPRA AISLADA A UNA RAZÓN PARA VOLVER</p>
         <h2 id="how-title">
-          Que quien te compra hoy
+          Tres pasos para que una venta
           <br />
-          <span>tenga motivos para comprarte otra vez.</span>
+          <span>no termine cuando cobras.</span>
         </h2>
         <p className="sales-intro">
-          Un programa de lealtad es esto: premiar a tus clientes por seguir comprándote. Lealtio lo
-          pone en su celular, con tu marca y tus reglas.
+          Un programa de lealtad premia a tu cliente por seguir eligiéndote. Lealtio pone ese
+          incentivo en su celular, con tu marca y las reglas que tú decides.
         </p>
       </div>
       <LoyaltySteps />
@@ -206,15 +228,16 @@ function BusinessExamples() {
     >
       <div className="sales-wrap">
         <div className="sales-section-heading">
-          <p className="sales-eyebrow">ASÍ PODRÍA VERSE EN TU NEGOCIO</p>
+          <p className="sales-eyebrow">OCHO FORMAS DE CONVERTIR HOY EN OTRA OPORTUNIDAD DE VENTA</p>
           <h2 id="examples-title">
-            Que piense en tu negocio
+            Elige la razón que hará
             <br />
-            <span>antes de comprar otra vez.</span>
+            <span>que quiera volver.</span>
           </h2>
           <p className="sales-intro">
-            Más visitas, paquetes cobrados por adelantado o regalos que traen personas a
-            descubrirte. Elige por dónde quieres empezar.
+            Más visitas, paquetes cobrados por adelantado, saldo para gastar contigo o regalos que
+            traen a alguien nuevo. Aquí puedes ver qué haría cada tarjeta en un negocio como el
+            tuyo.
           </p>
         </div>
         <CardShowcase />
@@ -233,16 +256,16 @@ function Benefits() {
       <div className="sales-wrap">
         <div className="sales-benefits-heading">
           <div>
-            <p className="sales-eyebrow">DESPUÉS DE COBRAR, LA RELACIÓN CONTINÚA</p>
+            <p className="sales-eyebrow">CUANDO SE VA, TU NEGOCIO PUEDE SEGUIR PRESENTE</p>
             <h2 id="benefits-title">
-              Que salir de tu negocio
+              Que no te olvide justo cuando
               <br />
-              <span>no sea dejar de comprarte.</span>
+              <span>está listo para comprar otra vez.</span>
             </h2>
           </div>
           <p>
-            Un día flojo. Un cliente que lleva semanas sin venir. Tu próxima venta también puede
-            empezar con alguien que ya te eligió.
+            Invítalo a volver, recuérdale lo que puede ganar y mira qué ocurre después. Lealtio te
+            da formas concretas de actuar entre una visita y la siguiente.
           </p>
         </div>
         <ContactShowcase />
@@ -254,9 +277,9 @@ function Benefits() {
 // Preserve the original offer data; explain each entitlement where it is read.
 function planFeatureLabel(feature: string) {
   const labels: Record<string, string> = {
-    "1 geo-localización (radio 100m)": "1 ubicación con avisos por cercanía en iPhone (100 m)",
-    "3 geo-localizaciones": "3 ubicaciones con avisos por cercanía en iPhone (100 m)",
-    "10 geo-localizaciones": "10 ubicaciones con avisos por cercanía en iPhone (100 m)",
+    "1 geo-localización (radio 100m)": "1 ubicación con aviso automático por cercanía (100 m)",
+    "3 geo-localizaciones": "3 ubicaciones con aviso automático por cercanía (100 m)",
+    "10 geo-localizaciones": "10 ubicaciones con aviso automático por cercanía (100 m)",
     "1 manager (Scanner App)": "1 persona de tu equipo con acceso al escáner (manager)",
     "10 managers (Scanner App)": "10 personas de tu equipo con acceso al escáner (managers)",
     "50 managers (Scanner App)": "50 personas de tu equipo con acceso al escáner (managers)",
@@ -284,9 +307,9 @@ function Pricing() {
   const [period, setPeriod] = useState<BillingPeriod>("monthly");
   const annual = period === "annual";
   const planGuidance = [
-    "Para que atraer un cliente no termine en una sola venta.",
-    "Para que tus clientes vuelvan y te ayuden a traer a los siguientes.",
-    "Para volver a invitar a quienes se alejan, mientras tú atiendes el negocio.",
+    "Para empezar a convertir compras sueltas en visitas con motivo.",
+    "Para activar más formas de volver, recomendar y dejar una reseña.",
+    "Para recuperar clientes y conectar la fidelización con tu operación.",
   ];
 
   return (
@@ -296,15 +319,15 @@ function Pricing() {
       aria-labelledby="plans-title"
     >
       <div className="sales-section-heading">
-        <p className="sales-eyebrow">EL PLAN PARA EMPEZAR A HACERLO</p>
+        <p className="sales-eyebrow">YA VISTE LO QUE PODRÍA CAMBIAR. AHORA ELIGE CÓMO EMPEZAR.</p>
         <h2 id="plans-title">
-          Elige cómo quieres empezar.
+          Pon a trabajar la próxima compra.
           <br />
           <span>Los primeros 14 días son gratis.</span>
         </h2>
         <p className="sales-intro">
-          Empieza a buscar más ventas entre quienes ya te compran. Elige el plan para tu equipo;
-          abajo puedes ver exactamente qué incluye.
+          Elige el alcance que necesita tu negocio. Puedes cambiar entre mensual y anual y ver
+          exactamente cuánto pagas y qué incluye cada plan.
         </p>
       </div>
       <ToggleGroup
@@ -406,11 +429,11 @@ function Trial() {
         <span>DÍAS GRATIS</span>
       </div>
       <div className="sales-trial-copy">
-        <p className="sales-eyebrow">TU PRIMER PASO, CON TUS PROPIOS CLIENTES</p>
-        <h2 id="trial-title">De la próxima compra a una razón para volver.</h2>
+        <p className="sales-eyebrow">NO TIENES QUE IMAGINARLO. PUEDES VERLO EN TU NEGOCIO.</p>
+        <h2 id="trial-title">Pon tu primera tarjeta en marcha durante 14 días.</h2>
         <p>
-          Prueba 14 días con tus propios clientes. Crea tu tarjeta e invítalos a guardarla al
-          cobrar: esa primera compra ya puede ser el comienzo de las siguientes.
+          Elige un plan, crea una tarjeta con tu marca y úsala con tus propios clientes. Verla en
+          sus celulares y registrar sus compras te dirá más que cualquier promesa de esta página.
         </p>
         <a className="sales-text-link" href="#planes">
           Elegir mi plan y probarlo <ArrowRight size={17} aria-hidden="true" />
@@ -419,15 +442,15 @@ function Trial() {
       <ul className="sales-trial-checks">
         <li>
           <Check size={18} aria-hidden="true" />
-          Tu marca en su celular
+          Una tarjeta con tu marca
         </li>
         <li>
           <Check size={18} aria-hidden="true" />
-          Una recompensa elegida por ti
+          Un premio y reglas elegidos por ti
         </li>
         <li>
           <Check size={18} aria-hidden="true" />
-          Tu primera compra registrada
+          Visitas y canjes registrados
         </li>
       </ul>
     </section>
@@ -436,44 +459,44 @@ function Trial() {
 
 const FAQS = [
   {
-    id: "negocio",
-    q: "¿Esto sirve para un negocio como el mío?",
-    a: "Si tus clientes pueden volver a comprarte, puedes premiar que te sigan eligiendo. Cortes, cafés, comidas, tratamientos: tú defines la recompensa y las reglas de tu negocio.",
+    id: "wallet",
+    q: "¿Mi cliente tendrá que descargar otra app y aprender a usarla?",
+    a: "No necesita una app de Lealtio. Escanea el QR que ve en tu negocio, se registra y guarda la tarjeta en Wallet: el mismo lugar del celular donde ya puede llevar tarjetas bancarias, boletos de avión o entradas. Apple Wallet viene en iPhone y Google Wallet está disponible en Android. Desde ahí ve su tarjeta y lo que le falta para ganar.",
+  },
+  {
+    id: "equipo",
+    q: "¿Necesito comprar lectores, una tableta o cambiar mi caja?",
+    a: "No. Tu equipo registra una visita o un canje desde el navegador de un celular con internet y cámara. Cada persona entra con su acceso al escáner; eso es lo que en los planes llamamos un manager. No es una terminal ni requiere un aparato especial.",
   },
   {
     id: "margen",
     q: "¿Voy a terminar regalando mi ganancia?",
-    a: "Tú eliges el premio y cuántas compras necesita para ganarlo. Puedes ofrecer un beneficio después de varias compras, sin descontar cada venta. Revisa su costo y elige algo que tu cliente valore y a tu negocio le convenga.",
+    a: "Tú decides el premio, su costo y cuántas compras hacen falta para ganarlo. Puedes premiar después de varias ventas o usar puntos, saldo, membresías y paquetes prepagados. La idea es dar un motivo valioso para volver sin descontar cada compra ni poner todo tu negocio en oferta.",
   },
   {
-    id: "equipo",
-    q: "Ya tengo mucho que hacer. ¿Cómo lo usaría mi equipo?",
-    a: "Eliges una plantilla y creas tu tarjeta. Al cobrar, tu equipo abre el escáner desde el navegador de un celular, lee la tarjeta y registra la compra o el canje. Necesita internet y permiso de cámara; no un lector especial.",
-  },
-  {
-    id: "wallet",
-    q: "¿Mis clientes van a tener que descargar otra app?",
-    a: "Tu cliente guarda su tarjeta en Apple Wallet, en iPhone, o en Google Wallet, en Android compatible. Escanea el QR de tu mostrador, se registra y pulsa para añadirla. No necesita una app de Lealtio. Google Wallet está disponible para descargar si aún no lo tiene.",
+    id: "negocio",
+    q: "¿Esto sirve para un negocio como el mío?",
+    a: "Si una persona puede volver a comprarte, puedes darle un motivo para hacerlo. Cafés, cortes, comidas, tratamientos, clases, compras y servicios caben en los ocho tipos de tarjeta. Tú eliges la mecánica que tenga sentido para tu negocio.",
   },
   {
     id: "compatibilidad",
     q: "¿Funciona igual en iPhone y Android?",
-    a: "Tus clientes pueden llevar su tarjeta en Apple Wallet o Google Wallet. Los avisos por cercanía están disponibles en iPhone, dentro de 100 m de una ubicación configurada. Para recibir mensajes, el cliente guarda la tarjeta y habilita las notificaciones y los permisos correspondientes. Puedes realizar los envíos incluidos en tu plan; Google Wallet muestra hasta tres notificaciones al día.",
+    a: "La tarjeta se guarda en Apple Wallet, en iPhone, o en Google Wallet, en Android. En ambos puede verla y recibir tus notificaciones con los permisos activados. El aviso automático por cercanía se activa mediante Apple Wallet cuando el cliente entra en el radio de 100 m de una ubicación configurada.",
   },
   {
     id: "planes-duda",
     q: "¿Cómo sé qué plan elegir?",
-    a: "Impulso: 1 programa y 1 persona registrando visitas. Turbo: 3 programas, 10 personas, referidos y solicitudes de reseñas. Cohete: 10 programas, 50 personas, recordatorios a clientes inactivos y conexión con tu software. Elige según lo que vas a usar.",
+    a: "Empieza con Impulso si necesitas un programa de lealtad y una persona registrando visitas. Turbo permite tres programas, diez personas, referidos y solicitudes de reseñas. Cohete amplía a diez programas y cincuenta personas, y añade recuperación de clientes inactivos y conexión API. En las tarjetas de precio tienes cada límite por escrito.",
+  },
+  {
+    id: "prueba",
+    q: "¿Qué puedo comprobar durante los 14 días?",
+    a: "Puedes crear tu tarjeta, mostrar el QR a tus clientes, guardar la tarjeta en sus celulares y registrar visitas o canjes con tu equipo. Así compruebas el uso real en tu negocio antes de juzgarlo solo por una demostración.",
   },
   {
     id: "anual",
-    q: "¿Cómo se cobra el plan anual?",
-    a: "Se cobra el año completo: $12,588 en Impulso, $18,588 en Turbo y $36,588 en Cohete (MXN, IVA incluido). La cifra por mes es el equivalente. Ahorras $5,400, $7,800 o $16,200, respectivamente, frente a doce mensualidades.",
-  },
-  {
-    id: "resultados",
-    q: "¿Cómo sé si está funcionando?",
-    a: "El panel muestra visitas y recompensas registradas. Durante la prueba, revisa que tus clientes guarden la tarjeta y tu equipo la use al cobrar. Las compras repetidas dependen del tiempo entre visitas, el premio y la experiencia en tu negocio.",
+    q: "¿Qué diferencia hay entre pagar mensual o anual?",
+    a: "En mensual pagas $1,499, $2,199 o $4,399 al mes. En anual haces un solo pago de $12,588, $18,588 o $36,588; su equivalente mensual es $1,049, $1,549 o $3,049. Todos los precios están en MXN e incluyen IVA. El selector de los planes te muestra ambos cálculos.",
   },
 ];
 
@@ -491,14 +514,14 @@ function Questions({
       aria-labelledby="faq-title"
     >
       <div>
-        <p className="sales-eyebrow">ANTES DE DECIDIR</p>
+        <p className="sales-eyebrow">LO QUE NORMALMENTE FRENA LA DECISIÓN</p>
         <h2 id="faq-title">
-          Tus dudas
+          Menos dudas.
           <br />
-          <span>tienen respuesta.</span>
+          <span>Más claridad para decidir.</span>
         </h2>
         <p className="sales-intro">
-          Tu tiempo, tu ganancia y cómo encaja en tu negocio. Hablemos de lo que importa.
+          Sin aparatos nuevos, sin otra app para tu cliente y con las reglas de tu negocio.
         </p>
       </div>
       <Accordion
@@ -523,16 +546,16 @@ function Close() {
   return (
     <section className="sales-close" aria-labelledby="close-title">
       <div className="sales-wrap">
-        <p className="sales-eyebrow">EMPIEZA CON LA PRÓXIMA PERSONA QUE TE COMPRE</p>
+        <p className="sales-eyebrow">LA SIGUIENTE OPORTUNIDAD PUEDE ENTRAR HOY POR TU PUERTA</p>
         <h2 id="close-title">
-          No dejes tu próxima venta
+          Que la próxima compra
           <br />
-          <span>en manos de la suerte.</span>
+          <span>no vuelva a empezar de cero.</span>
         </h2>
         <p>
-          Ya hiciste el esfuerzo de traerlo hasta tu negocio.
+          Ya haces el trabajo difícil: atraerlo y atenderlo bien.
           <br />
-          Dale una razón para que la próxima compra también sea contigo.
+          Ahora deja en su celular una razón para elegirte otra vez.
         </p>
         <TrialLink />
         <div className="sales-close-note">
@@ -560,9 +583,9 @@ export default function SalesPage() {
         Saltar al contenido
       </a>
       <div className="sales-announcement">
-        Empieza por quienes ya te compraron.{" "}
+        Tu primera tarjeta puede estar en marcha durante 14 días.{" "}
         <a href="#planes">
-          Conoce la prueba de 14 días <ArrowRight size={14} aria-hidden="true" />
+          Ver cómo empezar <ArrowRight size={14} aria-hidden="true" />
         </a>
       </div>
       <header className="sales-header">
@@ -588,19 +611,19 @@ export default function SalesPage() {
         <section className="sales-wrap sales-hero" aria-labelledby="hero-title">
           <div className="sales-hero-copy">
             <p className="sales-eyebrow">
-              <span /> PARA DUEÑOS DE NEGOCIOS LOCALES
+              <span /> PARA NEGOCIOS QUE NO QUIEREN VOLVER A EMPEZAR DE CERO
             </p>
             <h1 id="hero-title">
-              Que tus ventas no dependan <em>siempre de clientes nuevos.</em>
+              Haz que la compra de hoy <em>abra la puerta a la siguiente.</em>
             </h1>
             <p className="sales-hero-lead">
-              Conseguir un cliente cuesta trabajo.{" "}
-              <strong>Que ese esfuerzo no termine en una sola venta.</strong>
+              Ya invertiste tiempo, atención y dinero en conseguirlo.{" "}
+              <strong>Que no te compre una vez y desaparezca.</strong>
             </p>
             <p className="sales-hero-description">
-              Lealtio te ayuda a vender de nuevo a quienes ya te conocen. Creas una tarjeta digital
-              con tu marca que guardan en su celular, premias sus compras y los invitas a volver con
-              mensajes.
+              Lealtio pone en su celular una tarjeta digital con tu marca. Cada compra lo acerca a
+              un premio y tú puedes invitarlo a volver cuando quieras, sin depender de que se
+              acuerde de ti por casualidad.
             </p>
             <div className="sales-hero-actions">
               <TrialLink />
@@ -608,7 +631,17 @@ export default function SalesPage() {
                 Así funciona <ArrowRight size={17} aria-hidden="true" />
               </a>
             </div>
-            <p className="sales-fine">Desde $1,499 MXN/mes después de la prueba · IVA incluido</p>
+            <div className="sales-hero-reassurance" aria-label="Facilidades para empezar">
+              <span>
+                <Check size={14} aria-hidden="true" /> 14 días gratis
+              </span>
+              <span>
+                <Check size={14} aria-hidden="true" /> Sin comprar equipo
+              </span>
+              <span>
+                <Check size={14} aria-hidden="true" /> Sin app de Lealtio para tu cliente
+              </span>
+            </div>
             <div className="sales-social">
               <div className="sales-avatars">
                 {avatars.map((src) => (
@@ -638,9 +671,9 @@ export default function SalesPage() {
                 <Check size={18} aria-hidden="true" />
               </span>
               <span>
-                <strong>Una primera compra. Más oportunidades de volver a venderle.</strong>
+                <strong>Tu marca y su próxima recompensa viajan con él.</strong>
                 <br />
-                En Apple Wallet o Google Wallet.
+                En la billetera digital de su celular.
               </span>
             </figcaption>
           </figure>
@@ -676,7 +709,7 @@ export default function SalesPage() {
             loading="lazy"
           />
         </a>
-        <p>Que el esfuerzo de atraerlos te rinda más de una venta.</p>
+        <p>Que la compra de hoy abra la puerta a la siguiente.</p>
         <span>© {new Date().getFullYear()} Lealtio</span>
       </footer>
     </div>

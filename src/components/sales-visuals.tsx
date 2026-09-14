@@ -260,21 +260,21 @@ function RecordScene() {
 export function LoyaltySteps() {
   const steps = [
     {
-      title: "Dale una razón para elegirte otra vez.",
-      text: "Elige una plantilla con tu marca y ofrece un premio que tu cliente quiera ganar: un café, un servicio extra o un trato especial. Tú decides qué das y cuántas compras necesita.",
-      note: "Una razón para que la próxima compra también sea contigo.",
+      title: "Convierte la próxima compra en algo que quiera alcanzar.",
+      text: "Elige una tarjeta con tu marca y un premio que sí le dé ganas de volver: un café, un servicio extra o un trato especial. Tú decides qué entregas y cuántas compras necesita para ganarlo.",
+      note: "No regalas por regalar: construyes una razón para volver.",
       scene: <CreateScene />,
     },
     {
-      title: "Que se lleve algo más que su compra.",
-      text: "Al cobrar, invítalo a escanear el QR de tu mostrador. Se registra y guarda su tarjeta en el celular. Tu negocio y su próximo premio se van con él.",
-      note: "Después de cobrar, sigues teniendo cómo invitarlo a volver.",
+      title: "Haz que tu negocio se vaya con él en el celular.",
+      text: "Muestras el QR de tu programa en el mostrador. Tu cliente lo escanea, se registra y guarda su tarjeta. En unos toques se lleva tu marca, su avance y el premio que puede ganar.",
+      note: "Termina la compra, pero tu relación con él puede continuar.",
       scene: <JoinScene />,
     },
     {
-      title: "Haz que cada visita cuente para la siguiente.",
-      text: "Tu equipo abre el escáner de Lealtio en su celular, lee el código de la tarjeta del cliente y registra la compra. Él ve cómo avanza hacia su premio y cuánto le falta para ganarlo.",
-      note: "Ya cobraste esta compra. Ahora estás preparando la siguiente.",
+      title: "Que cada visita lo acerque a regresar.",
+      text: "Al cobrar, tu equipo abre el escáner de Lealtio en un celular, lee la tarjeta del cliente y registra la compra. Él ve al instante cuánto avanzó y qué le falta para ganar.",
+      note: "Cobras la venta de hoy mientras preparas el motivo de la siguiente.",
       scene: <RecordScene />,
     },
   ];
@@ -299,12 +299,12 @@ export function LoyaltySteps() {
             <Smartphone size={29} />
           </span>
           <div>
-            <p className="sales-eyebrow">EL EQUIPO YA LO TIENES</p>
-            <h3>Tu celular. El de tu equipo. Y listo.</h3>
+            <p className="sales-eyebrow">SIN COMPRAR APARATOS</p>
+            <h3>No necesitas otro lector, otra tableta ni otra caja.</h3>
             <p>
-              Sin comprar lectores ni aparatos especiales. Cada persona de tu equipo registra
-              visitas y canjes desde un celular con internet, con su propio acceso de{" "}
-              <strong>manager</strong>.
+              Cada persona de tu equipo puede registrar visitas y canjes desde un celular con
+              internet. En los planes, cada acceso para hacerlo aparece como un{" "}
+              <strong>manager</strong>: una persona autorizada para usar el escáner.
             </p>
           </div>
         </article>
@@ -313,11 +313,12 @@ export function LoyaltySteps() {
             <Wallet size={29} />
           </span>
           <div>
-            <p className="sales-eyebrow">TU CLIENTE LA LLEVA CONSIGO</p>
-            <h3>Tu tarjeta en su celular. Sin una app de Lealtio.</h3>
+            <p className="sales-eyebrow">SIN OTRA APP DE LEALTIO</p>
+            <h3>Donde ya guarda lo importante, también guarda tu negocio.</h3>
             <p>
-              La guarda en <strong>Apple Wallet o Google Wallet</strong>, la billetera digital de su
-              teléfono. Ahí consulta su tarjeta y lo que le falta para ganar.
+              Ese espacio donde puede llevar tarjetas bancarias, boletos de avión o entradas se
+              llama <strong>Wallet</strong>. Apple Wallet viene en iPhone y Google Wallet está
+              disponible en Android. Lealtio coloca ahí tu tarjeta, lista para consultar.
             </p>
             <div className="lv2-wallet-names">
               <span>Apple Wallet</span>
@@ -351,9 +352,9 @@ const CARD_EXAMPLES = [
     icon: Sparkles,
     src: "/cards/puntos.png",
     business: "CAFETERÍAS · SPAS · RESTAURANTES",
-    title: "Dales razones para seguir gastando contigo.",
-    text: "Sus compras se convierten en puntos para canjear por tus recompensas. Ve lo que lleva y lo que le falta: cada compra contigo tiene algo más que ofrecerle.",
-    benefit: "Que su próximo gasto sea otra venta para ti.",
+    title: "Haz que cada compra le deje ganas de alcanzar la siguiente.",
+    text: "Cada compra suma puntos para canjear por las recompensas que tú elijas. Tu cliente ve cuánto lleva y cuánto le falta: el progreso le recuerda que contigo ya tiene algo ganado.",
+    benefit: "Su avance convierte volver contigo en la opción que más le conviene.",
     detail: "Tú eliges cómo suma puntos y por qué los canjea.",
     action: "Compra",
     middle: "Acumula puntos",
@@ -694,9 +695,9 @@ export function ContactShowcase() {
       name: "Notificaciones push",
       shortName: "Mensajes",
       plan: "EN TODOS LOS PLANES",
-      title: "¿Día flojo? No te quedes mirando la puerta.",
-      text: "Invita a volver a quienes ya guardaron tu tarjeta. Las notificaciones push llevan tu promoción o novedad a su celular: una razón para visitarte, sin esperar a que vean tu próxima publicación.",
-      payoff: "Ve por la próxima venta entre quienes ya te conocen.",
+      title: "¿Día flojo? Ve por quienes ya saben por qué elegirte.",
+      text: "Envía una oferta, una novedad o una invitación a quienes guardaron tu tarjeta. Son notificaciones push: mensajes de tu negocio que aparecen en su celular y te permiten provocar una visita sin esperar a que recuerden buscarte.",
+      payoff: "En vez de mirar la puerta, tienes a quién invitar a volver.",
       scene: <NotificationScene />,
     },
     {
@@ -705,9 +706,9 @@ export function ContactShowcase() {
       name: "Geo-localización",
       shortName: "Cercanía",
       plan: "EN TODOS LOS PLANES",
-      title: "Está a unos pasos. Dale una razón para entrar.",
-      text: "Su café favorito, un premio pendiente, una buena excusa para pasar. Con la geo-localización, tu tarjeta en Apple Wallet puede recordárselo al acercarse a menos de 100 metros de tu ubicación.",
-      payoff: "Convierte estar de paso en una oportunidad de venta.",
+      title: "Está cerca de tu negocio. Haz que piense en entrar.",
+      text: "Tu tarjeta puede activar un aviso de cercanía en Apple Wallet cuando el cliente entra al radio de 100 metros de una ubicación configurada. Su premio pendiente aparece justo cuando pasar por tu negocio es fácil.",
+      payoff: "Una persona que iba de paso puede recordar que contigo tiene algo por ganar.",
       scene: <ProximityScene />,
     },
     {
@@ -716,9 +717,9 @@ export function ContactShowcase() {
       name: "Analítica en tiempo real",
       shortName: "Visitas",
       plan: "EN TODOS LOS PLANES",
-      title: "Que tu esfuerzo se mida en visitas. No en suposiciones.",
-      text: "La analítica en tiempo real te muestra las visitas y recompensas que registra tu equipo. Mira quién repite, qué premios canjea y cómo usa tu programa, sin llevar otra libreta de cuentas.",
-      payoff: "Deja de decidir a ciegas: mira quién vuelve y qué canjea.",
+      title: "Deja de preguntarte si regresan. Mira lo que sí está pasando.",
+      text: "La analítica en tiempo real reúne las visitas y los premios que registra tu equipo. Puedes ver quién repite y qué canjea, sin llevar otra libreta ni depender de la memoria de quien estaba en caja.",
+      payoff: "Tus decisiones parten de movimientos registrados, no de corazonadas.",
       scene: <ActivityScene />,
     },
     {
@@ -727,9 +728,9 @@ export function ContactShowcase() {
       name: "Referidos y reseñas",
       shortName: "Referidos",
       plan: "DESDE TURBO",
-      title: "Ya lo conquistaste. Dale motivos para traerte a alguien.",
+      title: "Si salió encantado, que no se quede solo en un “te recomiendo”.",
       text: "Con el programa de referidos automatizado, tu cliente comparte su enlace y puedes premiar sus recomendaciones. Las solicitudes automáticas de reseñas en Google lo invitan a contar su experiencia para ayudar a otros a elegirte.",
-      payoff: "Que atender bien también te ayude a conseguir nuevos clientes.",
+      payoff: "Convierte una buena experiencia en una invitación que sí puede circular.",
       scene: <ReferralScene />,
     },
     {
@@ -738,9 +739,9 @@ export function ContactShowcase() {
       name: "Clientes inactivos",
       shortName: "Regreso",
       plan: "EN COHETE",
-      title: "Que tu cliente habitual no pase meses sin volver.",
+      title: "No descubras demasiado tarde que tu cliente habitual dejó de venir.",
       text: "Elige cuántos días deben pasar desde la última visita registrada. Lealtio envía tu recordatorio al cumplirse ese plazo: así funciona la recuperación automática de clientes inactivos, sin escribirles uno por uno.",
-      payoff: "Tu invitación sale a tiempo, aunque tú estés atendiendo.",
+      payoff: "La invitación sale aunque tú estés ocupado atendiendo el negocio.",
       scene: <NotificationScene returning />,
     },
   ];
@@ -797,23 +798,68 @@ export function ContactShowcase() {
 export function FamiliarStrategy() {
   return (
     <aside className="lv2-familiar sales-wrap" aria-labelledby="familiar-title">
-      <p className="sales-eyebrow">TU NEGOCIO TAMBIÉN PUEDE JUGAR EN GRANDE</p>
-      <h2 id="familiar-title">
-        La estrategia de las grandes marcas.
-        <br />
-        <span>Ahora, al alcance de tu negocio.</span>
-      </h2>
-      <p>
-        Starbucks, Sephora y McDonald’s no se conforman con venderte una vez: te dan motivos para
-        volver. Tú también puedes hacerlo, sin desarrollar una plataforma desde cero.
-      </p>
-      <p className="lv2-familiar-payoff">
-        Ya haces el esfuerzo de atraerlos y atenderlos bien.{" "}
-        <strong>Haz que ese esfuerzo también trabaje para tu siguiente venta.</strong>
-      </p>
-      <a className="sales-text-link" href="#planes">
-        Quiero hacerlo en mi negocio <ArrowRight size={18} />
-      </a>
+      <div className="lv2-familiar-copy">
+        <p className="sales-eyebrow">LA LÓGICA QUE LAS GRANDES CADENAS NO DEJAN AL AZAR</p>
+        <h2 id="familiar-title">
+          Ellas convierten cada compra en una razón para volver.
+          <br />
+          <span>Ahora tú puedes hacerlo con tu propia marca.</span>
+        </h2>
+        <p>
+          Starbucks, Sephora y McDonald’s usan puntos, progreso y recompensas para seguir presentes
+          después de cobrar. Lealtio pone esa misma lógica comercial a tu alcance, sin que tengas
+          que desarrollar y mantener una plataforma desde cero.
+        </p>
+        <p className="lv2-familiar-payoff">
+          Tu negocio ya hace la parte difícil: atraer y atender bien.{" "}
+          <strong>Ahora puede dejar una razón visible para que vuelvan.</strong>
+        </p>
+        <a className="sales-text-link" href="#planes">
+          Quiero ponerlo en mi negocio <ArrowRight size={18} />
+        </a>
+      </div>
+      <div
+        className="lv2-familiar-visual"
+        role="img"
+        aria-label="Starbucks, Sephora y McDonald’s convierten compras en progreso y recompensas. Lealtio permite aplicar esa lógica con la marca de un negocio local."
+      >
+        <div className="lv2-brand-row">
+          <span>Starbucks Rewards</span>
+          <span>Sephora Rewards</span>
+          <span>MiMcDonald’s</span>
+        </div>
+        <div className="lv2-brand-flow">
+          <span>
+            <small>01</small>Compra
+          </span>
+          <ChevronRight size={18} />
+          <span>
+            <small>02</small>Avanza
+          </span>
+          <ChevronRight size={18} />
+          <span>
+            <small>03</small>Quiere volver
+          </span>
+        </div>
+        <div className="lv2-own-pass">
+          <div className="lv2-own-pass-top">
+            <span>TU MARCA</span>
+            <small>SU PRÓXIMO PREMIO</small>
+          </div>
+          <strong>4 de 6 visitas</strong>
+          <div className="lv2-own-pass-stamps" aria-hidden="true">
+            {[0, 1, 2, 3, 4, 5].map((item) => (
+              <i className={item < 4 ? "is-earned" : ""} key={item}>
+                {item < 4 ? "✓" : ""}
+              </i>
+            ))}
+          </div>
+          <p>Le faltan 2 para ganar</p>
+        </div>
+        <div className="lv2-familiar-badge">
+          <Sparkles size={17} /> LA ESTRATEGIA, CON TU NOMBRE
+        </div>
+      </div>
     </aside>
   );
 }
