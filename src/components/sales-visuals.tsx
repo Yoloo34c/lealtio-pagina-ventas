@@ -823,27 +823,45 @@ export function FamiliarStrategy() {
         role="img"
         aria-label="Starbucks, Sephora y McDonald’s convierten compras en progreso y recompensas. Lealtio permite aplicar esa lógica con la marca de un negocio local."
       >
+        <p className="lv2-brand-kicker">UN PATRÓN QUE YA HAS VISTO FUNCIONAR</p>
         <div className="lv2-brand-row">
-          <span>Starbucks Rewards</span>
-          <span>Sephora Rewards</span>
-          <span>MiMcDonald’s</span>
+          <span>Starbucks</span>
+          <span>Sephora</span>
+          <span>McDonald’s</span>
         </div>
         <div className="lv2-brand-flow">
-          <span>
-            <small>01</small>Compra
+          <span className="lv2-brand-flow-step">
+            <i>
+              <Wallet size={19} />
+            </i>
+            <strong>Compra</strong>
+            <small>Suma progreso</small>
           </span>
           <ChevronRight size={18} />
-          <span>
-            <small>02</small>Avanza
+          <span className="lv2-brand-flow-step">
+            <i>
+              <Stamp size={19} />
+            </i>
+            <strong>Avanza</strong>
+            <small>Ve lo que falta</small>
           </span>
           <ChevronRight size={18} />
-          <span>
-            <small>03</small>Quiere volver
+          <span className="lv2-brand-flow-step">
+            <i>
+              <Gift size={19} />
+            </i>
+            <strong>Regresa</strong>
+            <small>Va por su premio</small>
           </span>
+        </div>
+        <div className="lv2-brand-transfer">
+          <span />
+          <strong>AHORA, CON EL NOMBRE DE TU NEGOCIO</strong>
+          <span />
         </div>
         <div className="lv2-own-pass">
           <div className="lv2-own-pass-top">
-            <span>TU MARCA</span>
+            <span>TU NEGOCIO</span>
             <small>SU PRÓXIMO PREMIO</small>
           </div>
           <strong>4 de 6 visitas</strong>
@@ -854,10 +872,10 @@ export function FamiliarStrategy() {
               </i>
             ))}
           </div>
-          <p>Le faltan 2 para ganar</p>
+          <p>Le faltan 2 visitas para ganar</p>
         </div>
         <div className="lv2-familiar-badge">
-          <Sparkles size={17} /> LA ESTRATEGIA, CON TU NOMBRE
+          <Sparkles size={18} /> TU MARCA SIGUE PRESENTE DESPUÉS DE COBRAR
         </div>
       </div>
     </aside>
