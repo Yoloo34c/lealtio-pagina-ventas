@@ -342,13 +342,16 @@
 .sales-pain-path,
 .sales-hope-path {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 10px;
   margin-top: 25px;
   line-height: 1.35;
 }
 .sales-pain-path > span,
 .sales-pain-path > strong {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   min-width: 0;
   padding: 13px 12px;
@@ -372,6 +375,7 @@
 }
 .sales-pain-path > svg {
   flex: none;
+  align-self: center;
   color: #a8a1b4;
 }
 .sales-repeat-opportunity {
@@ -396,10 +400,14 @@
   color: var(--primary);
 }
 .sales-hope-path {
+  align-items: center;
   flex-wrap: wrap;
   gap: 7px;
   color: #60596a;
-  font-size: 0.74rem;
+  font-size: 0.83rem;
+}
+.sales-hope-path b {
+  color: #5a27bd;
 }
 .sales-hope-path svg {
   color: #7b2ff7;
@@ -1234,6 +1242,23 @@
   color: var(--muted-foreground);
   font-size: 0.75rem;
 }
+@media (max-width: 1150px) {
+  .sales-repeat {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+  .sales-repeat > div {
+    width: 100%;
+    max-width: 780px;
+    margin-inline: auto;
+  }
+  .sales-repeat-pain > p:not(.sales-eyebrow) {
+    max-width: 650px;
+  }
+  .sales-repeat-opportunity > p:not(.sales-eyebrow) {
+    max-width: 680px;
+  }
+}
 @media (max-width: 1050px) {
   .sales-wrap {
     width: calc(100% - 56px);
@@ -1274,13 +1299,6 @@
   .sales-hero-visual {
     width: min(100%, 640px);
     margin-inline: auto;
-  }
-  .sales-repeat {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-  .sales-repeat > div:first-child {
-    max-width: 720px;
   }
 }
 @media (max-width: 760px) {
@@ -1656,5 +1674,30 @@
   }
   .sales-benefit-grid {
     grid-template-columns: 1fr;
+  }
+  .sales-pain-path {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .sales-pain-path > span,
+  .sales-pain-path > strong {
+    width: 100%;
+    flex: none;
+    padding: 11px 14px;
+  }
+  .sales-pain-path > svg {
+    transform: rotate(90deg);
+  }
+  .sales-repeat-opportunity {
+    padding: 18px;
+  }
+  .sales-hope-path {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sales-hope-path > svg {
+    align-self: center;
+    transform: rotate(90deg);
   }
 }

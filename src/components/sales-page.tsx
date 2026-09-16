@@ -42,48 +42,52 @@ function RepeatPurchase() {
   return (
     <section className="sales-wrap sales-repeat" aria-labelledby="repeat-title">
       <div className="sales-repeat-pain">
-        <p className="sales-eyebrow">EL PROBLEMA NO TERMINA CUANDO EL CLIENTE SE VA</p>
         <h2 id="repeat-title">
-          Ya pagaste por atraerlo.
+          Te desvives por atenderlo.
           <br />
-          <span>Pero solo te compró una vez.</span>
+          <span>Pasan las semanas y no vuelve.</span>
         </h2>
         <p>
-          Lo encontraste, lo convenciste y lo atendiste bien. Después salió por la puerta y
-          desapareció de tu radar. Mientras tanto, la renta y los sueldos siguen corriendo, aunque
-          el negocio esté flojo.
+          Miras el negocio flojo mientras la renta y los sueldos siguen corriendo. Vuelves a gastar
+          tiempo y dinero para atraer a alguien nuevo. Y el cliente que ya te había elegido puede
+          estar haciendo su siguiente compra en otro lugar, sin que siquiera te enteres.
         </p>
-        <div
-          className="sales-pain-path"
-          aria-label="Lo que ocurre cuando la relación termina al cobrar"
-        >
+        <div className="sales-pain-path" aria-label="Lo que ocurre cuando el cliente no vuelve">
           <span>
             <small>HOY</small>Te compra
           </span>
           <ArrowRight size={18} aria-hidden="true" />
           <span>
-            <small>DESPUÉS</small>Pierdes el contacto
+            <small>DESPUÉS</small>Dejas de verlo
           </span>
           <ArrowRight size={18} aria-hidden="true" />
           <strong>
-            <small>PRÓXIMA COMPRA</small>Vuelve a elegir desde cero
+            <small>SU PRÓXIMA COMPRA</small>Otro puede cobrarla
           </strong>
         </div>
       </div>
       <div className="sales-repeat-opportunity">
-        <p className="sales-eyebrow">NO TIENES QUE CONQUISTARLO OTRA VEZ DESDE CERO</p>
+        <p className="sales-eyebrow">QUE SU PRÓXIMA COMPRA NO SE VAYA CON OTRO</p>
         <h3>La siguiente venta puede empezar con alguien que ya confía en ti.</h3>
         <p>
-          Lealtio deja en su celular una razón visible para volver: tu marca, su avance y el premio
-          que puede ganar si sigue comprándote. Y cuando quieras traerlo de regreso, tienes cómo
-          recordarle que lo esperas.
+          Lo atendiste bien. Ahora dale una razón para que la próxima compra también sea contigo.{" "}
+          <strong>Lealtio lo hace posible con tu propio programa de lealtad:</strong> una tarjeta de
+          tu negocio en su celular le muestra cómo cada compra lo acerca a un premio por seguir
+          comprándote. Volver le conviene a él; esa venta que otro podía cobrar puede quedarse en tu
+          negocio, sin que tengas que rogarle ni empezar de cero con un desconocido.
         </p>
         <div className="sales-hope-path">
-          <span>Compra hoy</span>
+          <span>
+            <b>HOY</b> Te compra
+          </span>
           <ArrowRight size={16} aria-hidden="true" />
-          <span>Ve lo que puede ganar</span>
+          <span>
+            <b>DESPUÉS</b> Tiene algo que ganar al volver
+          </span>
           <ArrowRight size={16} aria-hidden="true" />
-          <strong>Tiene una razón para volver</strong>
+          <strong>
+            <b>SU PRÓXIMA COMPRA</b> Puede ser contigo
+          </strong>
         </div>
         <a className="sales-text-link" href="#como-funciona">
           Mira cómo lo harías <ArrowRight size={17} aria-hidden="true" />
