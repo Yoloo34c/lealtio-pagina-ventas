@@ -471,7 +471,7 @@ const FAQS = [
   {
     id: "wallet",
     q: "¿Mi cliente tendrá que descargar otra app y aprender a usarla?",
-    a: "No necesita una app de Lealtio. Escanea el QR que ve en tu negocio, se registra y guarda la tarjeta en Wallet: el mismo lugar del celular donde ya puede llevar tarjetas bancarias, boletos de avión o entradas. Apple Wallet viene en iPhone y Google Wallet está disponible en Android. Desde ahí ve su tarjeta y lo que le falta para ganar.",
+    a: "No necesita una app de Lealtio. Escanea el QR que ve en tu negocio, se registra y guarda la tarjeta en Wallet: el mismo lugar del celular donde ya puede llevar tarjetas bancarias, boletos de avión o entradas al cine. Apple Wallet viene en iPhone y Google Wallet está disponible en Android. Desde ahí ve su tarjeta y lo que le falta para ganar.",
   },
   {
     id: "equipo",

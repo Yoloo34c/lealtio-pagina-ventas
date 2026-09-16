@@ -300,11 +300,11 @@ export function LoyaltySteps() {
           </span>
           <div>
             <p className="sales-eyebrow">SIN COMPRAR APARATOS</p>
-            <h3>No necesitas otro lector, otra tableta ni otra caja.</h3>
+            <h3>No necesitas comprar aparatos para usar Lealtio en tu negocio.</h3>
             <p>
-              Cada persona de tu equipo puede registrar visitas y canjes desde un celular con
-              internet. En los planes, cada acceso para hacerlo aparece como un{" "}
-              <strong>manager</strong>: una persona autorizada para usar el escáner.
+              Tú o alguien de tu equipo registra visitas y canjes desde un celular con internet y
+              cámara. No tienes que cambiar tu forma de cobrar. En los planes,{" "}
+              <strong>manager</strong> es cada persona de tu equipo a la que das acceso al escáner.
             </p>
           </div>
         </article>
@@ -314,11 +314,13 @@ export function LoyaltySteps() {
           </span>
           <div>
             <p className="sales-eyebrow">SIN OTRA APP DE LEALTIO</p>
-            <h3>Donde ya guarda lo importante, también guarda tu negocio.</h3>
+            <h3>No tendrás que convencer a tus clientes de instalar una app de Lealtio.</h3>
             <p>
-              Ese espacio donde puede llevar tarjetas bancarias, boletos de avión o entradas se
-              llama <strong>Wallet</strong>. Apple Wallet viene en iPhone y Google Wallet está
-              disponible en Android. Lealtio coloca ahí tu tarjeta, lista para consultar.
+              Tras escanear el QR de tu negocio y registrarse, pueden guardar su tarjeta en la
+              billetera digital del celular: el mismo lugar donde también pueden llevar entradas al
+              cine o boletos de avión. En iPhone se llama Apple Wallet y ya viene integrada; en
+              Android, Google Wallet. Lealtio les entrega la tarjeta allí, sin pedirles que
+              descarguen ni aprendan una app de Lealtio.
             </p>
             <div className="lv2-wallet-names">
               <span>Apple Wallet</span>
