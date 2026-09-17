@@ -299,12 +299,18 @@ export function LoyaltySteps() {
             <Smartphone size={29} />
           </span>
           <div>
-            <p className="sales-eyebrow">EMPIEZA CON EL CELULAR QUE YA TIENES</p>
-            <h3>Tu equipo registra visitas y canjes sin comprar equipo especial.</h3>
+            <p className="sales-eyebrow">SIN GASTAR EN EQUIPO EXTRA</p>
+            <h3>
+              No tienes que comprar ni aprender a usar aparatos especiales, costosos o complicados.
+            </h3>
             <p>
-              Las personas de tu equipo que elijas como <strong>managers</strong> abren el escáner
-              en un celular con internet y cámara. Tú decides quién tiene acceso y sigues cobrando
-              como siempre.
+              Desde cualquier celular con cámara e internet, tú y tu equipo pueden registrar
+              visitas, sumar puntos y canjear premios. Tú eliges quiénes serán{" "}
+              <strong>managers</strong> y cada persona recibe su propio acceso al escáner para
+              usarlo desde su propio celular.
+            </p>
+            <p>
+              Sin lectores extraños, instalaciones complicadas ni cambios en tu forma de cobrar.
             </p>
           </div>
         </article>
@@ -313,12 +319,18 @@ export function LoyaltySteps() {
             <Wallet size={29} />
           </span>
           <div>
-            <p className="sales-eyebrow">SIN COMPLICARLE LA VIDA A TUS CLIENTES</p>
-            <h3>No tienen que descargar ni aprender a usar una app desconocida de tu negocio.</h3>
+            <p className="sales-eyebrow">SIN OTRA APP QUE DESCARGAR</p>
+            <h3>
+              Tu cliente no tiene que descargar ni aprender a usar una app desconocida de tu
+              negocio.
+            </h3>
             <p>
-              Lealtio entrega su tarjeta en la billetera digital del celular: Apple Wallet en iPhone
-              y Google Wallet en Android. Es el mismo lugar donde guardan entradas al cine y boletos
-              de conciertos. Escanean el QR de tu negocio, la guardan y listo.
+              Ese espacio donde tu cliente ya guarda su tarjeta bancaria, boletos de conciertos y
+              entradas al cine se llama <strong>Wallet</strong>. Viene integrado de fábrica en
+              iPhone y ya está instalado en muchos modelos Android.{" "}
+              <strong>
+                Lealtio simplemente entrega ahí la tarjeta de tu negocio, lista para usar.
+              </strong>
             </p>
             <div
               className="lv2-wallet-options"
