@@ -470,13 +470,13 @@ function Trial() {
 const FAQS = [
   {
     id: "wallet",
-    q: "¿Mi cliente tendrá que descargar otra app y aprender a usarla?",
-    a: "No necesita una app de Lealtio. Escanea el QR que ve en tu negocio, se registra y guarda la tarjeta en Wallet: el mismo lugar del celular donde ya puede llevar tarjetas bancarias, boletos de avión o entradas al cine. Apple Wallet viene en iPhone y Google Wallet está disponible en Android. Desde ahí ve su tarjeta y lo que le falta para ganar.",
+    q: "¿Mi cliente tendrá que descargar y aprender a usar una app desconocida?",
+    a: "No. Escanea el QR de tu negocio, se registra y guarda su tarjeta en la billetera digital del celular: Apple Wallet en iPhone o Google Wallet en Android, el mismo lugar donde guarda entradas al cine y boletos de conciertos. Desde ahí ve su tarjeta y lo que le falta para ganar, sin aprender a usar una app nueva o desconocida de tu negocio.",
   },
   {
     id: "equipo",
     q: "¿Necesito comprar lectores, una tableta o cambiar mi caja?",
-    a: "No. Tu equipo registra una visita o un canje desde el navegador de un celular con internet y cámara. Cada persona entra con su acceso al escáner; eso es lo que en los planes llamamos un manager. No es una terminal ni requiere un aparato especial.",
+    a: "No. Las personas de tu equipo que elijas como managers abren el escáner en un celular con internet y cámara. Tú decides quién tiene acceso, sigues cobrando como siempre y no compras equipo especial.",
   },
   {
     id: "margen",
@@ -531,7 +531,8 @@ function Questions({
           <span>Más claridad para decidir.</span>
         </h2>
         <p className="sales-intro">
-          Sin aparatos nuevos, sin otra app para tu cliente y con las reglas de tu negocio.
+          Sin equipo especial, sin una app desconocida para tu cliente y con las reglas de tu
+          negocio.
         </p>
       </div>
       <Accordion

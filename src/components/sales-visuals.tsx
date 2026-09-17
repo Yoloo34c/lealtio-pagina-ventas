@@ -299,12 +299,12 @@ export function LoyaltySteps() {
             <Smartphone size={29} />
           </span>
           <div>
-            <p className="sales-eyebrow">SIN COMPRAR APARATOS</p>
-            <h3>No necesitas comprar aparatos para usar Lealtio en tu negocio.</h3>
+            <p className="sales-eyebrow">EMPIEZA CON EL CELULAR QUE YA TIENES</p>
+            <h3>Tu equipo registra visitas y canjes sin comprar equipo especial.</h3>
             <p>
-              Tú o alguien de tu equipo registra visitas y canjes desde un celular con internet y
-              cámara. No tienes que cambiar tu forma de cobrar. En los planes,{" "}
-              <strong>manager</strong> es cada persona de tu equipo a la que das acceso al escáner.
+              Las personas de tu equipo que elijas como <strong>managers</strong> abren el escáner
+              en un celular con internet y cámara. Tú decides quién tiene acceso y sigues cobrando
+              como siempre.
             </p>
           </div>
         </article>
@@ -313,18 +313,31 @@ export function LoyaltySteps() {
             <Wallet size={29} />
           </span>
           <div>
-            <p className="sales-eyebrow">SIN OTRA APP DE LEALTIO</p>
-            <h3>No tendrás que convencer a tus clientes de instalar una app de Lealtio.</h3>
+            <p className="sales-eyebrow">SIN COMPLICARLE LA VIDA A TUS CLIENTES</p>
+            <h3>No tienen que descargar ni aprender a usar una app desconocida de tu negocio.</h3>
             <p>
-              Tras escanear el QR de tu negocio y registrarse, pueden guardar su tarjeta en la
-              billetera digital del celular: el mismo lugar donde también pueden llevar entradas al
-              cine o boletos de avión. En iPhone se llama Apple Wallet y ya viene integrada; en
-              Android, Google Wallet. Lealtio les entrega la tarjeta allí, sin pedirles que
-              descarguen ni aprendan una app de Lealtio.
+              Lealtio entrega su tarjeta en la billetera digital del celular: Apple Wallet en iPhone
+              y Google Wallet en Android. Es el mismo lugar donde guardan entradas al cine y boletos
+              de conciertos. Escanean el QR de tu negocio, la guardan y listo.
             </p>
-            <div className="lv2-wallet-names">
-              <span>Apple Wallet</span>
-              <span>Google Wallet</span>
+            <div
+              className="lv2-wallet-options"
+              aria-label="Disponible en Apple Wallet y Google Wallet"
+            >
+              <span className="lv2-wallet-option">
+                <i className="lv2-wallet-mark lv2-wallet-mark-apple" aria-hidden="true" />
+                <span>
+                  <small>DISPONIBLE EN</small>
+                  <strong>Apple Wallet</strong>
+                </span>
+              </span>
+              <span className="lv2-wallet-option">
+                <i className="lv2-wallet-mark lv2-wallet-mark-google" aria-hidden="true" />
+                <span>
+                  <small>DISPONIBLE EN</small>
+                  <strong>Google Wallet</strong>
+                </span>
+              </span>
             </div>
           </div>
         </article>
@@ -796,23 +809,23 @@ export function FamiliarStrategy() {
   return (
     <aside className="lv2-familiar sales-wrap" aria-labelledby="familiar-title">
       <div className="lv2-familiar-copy">
-        <p className="sales-eyebrow">LA LÓGICA QUE LAS GRANDES CADENAS NO DEJAN AL AZAR</p>
+        <p className="sales-eyebrow">TECNOLOGÍA DE GRANDES MARCAS. CON TU NOMBRE.</p>
         <h2 id="familiar-title">
-          Ellas convierten cada compra en una razón para volver.
+          La estrategia que Starbucks, Sephora y McDonald’s usan para que sus clientes vuelvan.
           <br />
-          <span>Ahora tú puedes hacerlo con tu propia marca.</span>
+          <span>Ahora, al alcance de tu negocio.</span>
         </h2>
         <p>
-          Starbucks, Sephora y McDonald’s usan puntos, progreso y recompensas para seguir presentes
-          después de cobrar. Lealtio pone esa misma lógica comercial a tu alcance, sin que tengas
-          que desarrollar y mantener una plataforma desde cero.
+          Ellas no dejan la próxima venta a la memoria: convierten cada compra en puntos, progreso y
+          algo que el cliente quiere alcanzar. Con Lealtio, esa misma estrategia lleva tu nombre,
+          tus colores y las reglas que tú decides.
         </p>
         <p className="lv2-familiar-payoff">
-          Tu negocio ya hace la parte difícil: atraer y atender bien.{" "}
-          <strong>Ahora puede dejar una razón visible para que vuelvan.</strong>
+          <strong>La tecnología ya está construida.</strong> Tú la pones a trabajar sin invertir
+          miles de dólares en desarrollar una plataforma propia ni cargar con su mantenimiento.
         </p>
         <a className="sales-text-link" href="#planes">
-          Quiero ponerlo en mi negocio <ArrowRight size={18} />
+          Quiero esta estrategia en mi negocio <ArrowRight size={18} />
         </a>
       </div>
       <div

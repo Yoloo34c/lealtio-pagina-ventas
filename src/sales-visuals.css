@@ -476,16 +476,60 @@
   color: #595268;
   margin: 0;
 }
-.lv2-wallet-names {
+.lv2-wallet-options {
   display: flex;
-  gap: 16px;
-  margin-top: 14px;
-  font-size: 12px;
-  font-weight: 700;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
 }
-.lv2-wallet-names span {
-  border-bottom: 1px solid #d1c6e6;
-  padding-bottom: 3px;
+.lv2-wallet-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 7px 13px 7px 8px;
+  border-radius: 12px;
+  color: #fff;
+  background: #050505;
+  box-shadow: 0 10px 24px -18px #0c0618;
+}
+.lv2-wallet-option > span {
+  display: grid;
+  gap: 1px;
+  line-height: 1;
+}
+.lv2-wallet-option small {
+  font-size: 7px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+.lv2-wallet-option strong {
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+.lv2-wallet-mark {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 38px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lv2-wallet-mark::before {
+  position: absolute;
+  top: -15px;
+  width: 518px;
+  height: 79px;
+  background: url("./assets/wallet-badges.png") no-repeat;
+  background-size: 518px 79px;
+  content: "";
+}
+.lv2-wallet-mark-apple::before {
+  left: -14px;
+}
+.lv2-wallet-mark-google::before {
+  left: -292px;
 }
 .lv2-card-showcase {
   margin-top: 28px;
