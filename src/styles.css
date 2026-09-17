@@ -3,6 +3,7 @@
 @import "tw-animate-css";
 @import "./sales.css";
 @import "./sales-visuals.css";
+@import "./legal.css";
 
 @custom-variant dark (&:is(.dark *));
 

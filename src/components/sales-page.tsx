@@ -427,6 +427,12 @@ function Pricing() {
           );
         })}
       </div>
+      <p className="sales-plan-legal">
+        Las condiciones aplicables de la prueba, el cobro y la renovación se muestran antes de
+        completar el registro. Al continuar aceptas los{" "}
+        <a href="/terminos-y-condiciones">Términos y condiciones</a> y la{" "}
+        <a href="/cancelaciones-y-reembolsos">Política de cancelaciones y reembolsos</a>.
+      </p>
     </section>
   );
 }
@@ -709,18 +715,28 @@ export default function SalesPage() {
         <Close />
       </main>
       <footer className="sales-footer sales-wrap">
-        <a href="#inicio" aria-label="Lealtio, volver al inicio">
-          <img
-            className="sales-logo"
-            src="/lealtio-logo.webp"
-            alt="Lealtio"
-            width={600}
-            height={300}
-            loading="lazy"
-          />
-        </a>
-        <p>Que la compra de hoy abra la puerta a la siguiente.</p>
-        <span>© {new Date().getFullYear()} Lealtio</span>
+        <div className="sales-footer-brand">
+          <a href="#inicio" aria-label="Lealtio, volver al inicio">
+            <img
+              className="sales-logo"
+              src="/lealtio-logo.webp"
+              alt="Lealtio"
+              width={600}
+              height={300}
+              loading="lazy"
+            />
+          </a>
+          <p>Producto operado por Eduardo B Cano desde el Estado de México, México.</p>
+        </div>
+        <nav aria-label="Enlaces legales">
+          <a href="/aviso-de-privacidad">Aviso de privacidad</a>
+          <a href="/terminos-y-condiciones">Términos y condiciones</a>
+          <a href="/cancelaciones-y-reembolsos">Cancelaciones y reembolsos</a>
+        </nav>
+        <div className="sales-footer-contact">
+          <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>
+          <span>© {new Date().getFullYear()} Lealtio</span>
+        </div>
       </footer>
     </div>
   );
