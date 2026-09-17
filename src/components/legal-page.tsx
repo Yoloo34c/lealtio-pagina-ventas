@@ -1,11 +1,5 @@
 import type { ReactNode } from "react";
 
-const LEGAL_LINKS = [
-  { href: "/aviso-de-privacidad", label: "Aviso de privacidad" },
-  { href: "/terminos-y-condiciones", label: "Términos y condiciones" },
-  { href: "/cancelaciones-y-reembolsos", label: "Cancelaciones y reembolsos" },
-];
-
 export function LegalPage({
   eyebrow,
   title,
@@ -38,23 +32,7 @@ export function LegalPage({
           <span>Última actualización: 17 de septiembre de 2026</span>
         </div>
 
-        <div className="legal-layout">
-          <aside aria-label="Documentos legales">
-            <strong>Documentos legales</strong>
-            <nav>
-              {LEGAL_LINKS.map((link) => (
-                <a key={link.href} href={link.href}>
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-            <p>
-              ¿Tienes una duda? Escríbenos a <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>.
-            </p>
-          </aside>
-
-          <article className="legal-content">{children}</article>
-        </div>
+        <article className="legal-content">{children}</article>
       </main>
 
       <LegalFooter />
@@ -75,18 +53,12 @@ export function LegalFooter() {
   return (
     <footer className="legal-footer">
       <div className="legal-wrap">
-        <div>
+        <div className="legal-footer-brand">
           <img src="/lealtio-logo.webp" alt="Lealtio" width={600} height={300} loading="lazy" />
-          <p>Producto operado por Eduardo B Cano desde el Estado de México, México.</p>
         </div>
-        <nav aria-label="Enlaces legales">
-          {LEGAL_LINKS.map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.label}
-            </a>
-          ))}
-          <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>
-        </nav>
+        <a className="legal-footer-contact" href="mailto:hola@lealtio.com">
+          Contacto: hola@lealtio.com
+        </a>
         <span>© {new Date().getFullYear()} Lealtio</span>
       </div>
     </footer>

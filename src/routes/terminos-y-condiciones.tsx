@@ -21,15 +21,7 @@ function TermsAndConditions() {
       title="Términos y condiciones"
       intro="Estas condiciones regulan el acceso, la contratación y el uso de Lealtio. Las condiciones concretas mostradas antes de completar cada compra forman parte de este acuerdo."
     >
-      <LegalSection title="1. Quién presta el servicio">
-        <p>
-          Lealtio es un producto digital operado por <strong>Eduardo B Cano</strong> desde el Estado
-          de México, México. Puedes contactarnos en{" "}
-          <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="2. Qué es Lealtio">
+      <LegalSection title="1. Qué es Lealtio">
         <p>
           Lealtio permite a negocios crear y administrar programas digitales de lealtad, tarjetas,
           recompensas, comunicaciones y otras funciones relacionadas con la fidelización de
@@ -38,7 +30,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="3. Contratación y aceptación">
+      <LegalSection title="2. Contratación y aceptación">
         <p>
           Al crear una cuenta, iniciar una prueba o completar una compra declaras que tienes
           capacidad para contratar y que aceptas estos términos, el aviso de privacidad, la política
@@ -50,7 +42,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="4. Activación y entrega digital">
+      <LegalSection title="3. Activación y entrega digital">
         <p>
           Lealtio es un servicio digital y no implica el envío de productos físicos. El acceso se
           habilita normalmente el mismo día en que el registro o pago queda aprobado. Si ocurre una
@@ -58,7 +50,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Planes, precios y funciones">
+      <LegalSection title="4. Planes, precios y funciones">
         <p>
           Los planes, precios, periodos de facturación, límites, funciones, descuentos y promociones
           vigentes son los que se muestran antes de completar el registro o pago. Lealtio puede
@@ -71,7 +63,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Pruebas gratuitas y promociones">
+      <LegalSection title="5. Pruebas gratuitas y promociones">
         <p>
           Lealtio puede ofrecer pruebas gratuitas con o sin método de pago, según la promoción
           vigente. Antes de comenzar se mostrará si la prueba requiere una tarjeta, su duración, el
@@ -84,7 +76,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="7. Pagos y renovaciones">
+      <LegalSection title="6. Pagos y renovaciones">
         <p>
           Los pagos se procesan mediante el proveedor que aparezca en la pantalla de compra, como
           Mercado Pago o Stripe. Lealtio no almacena los datos completos de la tarjeta. Al elegir
@@ -98,20 +90,16 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="8. Cancelaciones y reembolsos">
+      <LegalSection title="7. Cancelaciones y reembolsos">
         <p>
           Puedes cancelar una suscripción para detener su siguiente renovación. El acceso continuará
           hasta el final del periodo ya pagado. Los periodos ya iniciados no se reembolsan ni se
           prorratean, salvo cobro duplicado, error atribuible a Lealtio o cuando la legislación
           aplicable exija otra solución.
         </p>
-        <p>
-          Consulta el procedimiento completo en nuestra{" "}
-          <a href="/cancelaciones-y-reembolsos">Política de cancelaciones y reembolsos</a>.
-        </p>
       </LegalSection>
 
-      <LegalSection title="9. Cuenta y responsabilidades del cliente">
+      <LegalSection title="8. Cuenta y responsabilidades del cliente">
         <p>
           El cliente debe proporcionar información verdadera, proteger sus accesos y mantener
           actualizados sus datos de contacto y pago. También es responsable de configurar de forma
@@ -120,7 +108,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="10. Uso permitido">
+      <LegalSection title="9. Uso permitido">
         <p>No está permitido utilizar Lealtio para:</p>
         <ul>
           <li>Cometer fraude, suplantar identidades o infringir derechos de terceros.</li>
@@ -130,7 +118,7 @@ function TermsAndConditions() {
         </ul>
       </LegalSection>
 
-      <LegalSection title="11. Disponibilidad y soporte">
+      <LegalSection title="10. Disponibilidad y soporte">
         <p>
           Trabajamos para mantener el servicio disponible, pero pueden existir interrupciones por
           mantenimiento, proveedores, internet o causas fuera de nuestro control. Atenderemos las
@@ -139,7 +127,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="12. Propiedad intelectual">
+      <LegalSection title="11. Propiedad intelectual">
         <p>
           Lealtio, su identidad visual, el sitio y sus materiales están protegidos por las normas
           aplicables. El cliente conserva los derechos sobre sus marcas y contenidos y concede los
@@ -147,7 +135,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="13. Suspensión o terminación">
+      <LegalSection title="12. Suspensión o terminación">
         <p>
           Podemos suspender una cuenta por falta de pago, fraude, riesgo de seguridad, uso ilegal o
           incumplimiento grave de estos términos. Cuando sea razonablemente posible, informaremos al
@@ -155,7 +143,7 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="14. Legislación aplicable y cambios">
+      <LegalSection title="13. Legislación aplicable y cambios">
         <p>
           Estos términos se interpretan conforme a las leyes aplicables en México, sin limitar los
           derechos irrenunciables que correspondan al consumidor. Podemos actualizarlos para
@@ -164,9 +152,10 @@ function TermsAndConditions() {
         </p>
       </LegalSection>
 
-      <LegalSection title="15. Contacto">
+      <LegalSection title="14. Prestador del servicio y contacto">
         <p>
-          Para dudas sobre el servicio o estas condiciones, escribe a{" "}
+          Lealtio es un producto digital operado por <strong>Eduardo B Cano</strong> desde el Estado
+          de México, México. Para dudas sobre el servicio o estas condiciones, escribe a{" "}
           <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>.
         </p>
       </LegalSection>

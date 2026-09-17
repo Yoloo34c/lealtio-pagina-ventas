@@ -726,7 +726,6 @@ export default function SalesPage() {
               loading="lazy"
             />
           </a>
-          <p>Producto operado por Eduardo B Cano desde el Estado de México, México.</p>
         </div>
         <nav aria-label="Enlaces legales">
           <a href="/aviso-de-privacidad">Aviso de privacidad</a>
@@ -734,7 +733,7 @@ export default function SalesPage() {
           <a href="/cancelaciones-y-reembolsos">Cancelaciones y reembolsos</a>
         </nav>
         <div className="sales-footer-contact">
-          <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>
+          <a href="mailto:hola@lealtio.com">Contacto: hola@lealtio.com</a>
           <span>© {new Date().getFullYear()} Lealtio</span>
         </div>
       </footer>

@@ -21,19 +21,7 @@ function PrivacyNotice() {
       title="Aviso de privacidad"
       intro="Este aviso explica qué información trata Lealtio, para qué la utiliza y cómo puedes ejercer tus derechos sobre ella."
     >
-      <LegalSection title="1. Responsable de los datos">
-        <p>
-          <strong>Eduardo B Cano</strong>, quien opera comercialmente el producto Lealtio desde el
-          Estado de México, México, es responsable del tratamiento de los datos personales descritos
-          en este aviso.
-        </p>
-        <p>
-          Para cualquier solicitud relacionada con privacidad puedes escribir a{" "}
-          <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="2. Datos que podemos tratar">
+      <LegalSection title="1. Datos que podemos tratar">
         <p>Según la forma en que utilices el sitio o el servicio, podemos tratar:</p>
         <ul>
           <li>Nombre, correo electrónico, teléfono y datos de contacto.</li>
@@ -55,7 +43,7 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="3. Para qué utilizamos la información">
+      <LegalSection title="2. Para qué utilizamos la información">
         <p>Utilizamos la información para finalidades necesarias, entre ellas:</p>
         <ul>
           <li>Crear, operar y proteger tu cuenta.</li>
@@ -72,7 +60,7 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="4. Datos de los clientes de cada negocio">
+      <LegalSection title="3. Datos de los clientes de cada negocio">
         <p>
           Cada negocio que utiliza Lealtio decide qué datos solicita a sus propios clientes y con
           qué finalidad los utiliza. El negocio es responsable de contar con las autorizaciones y
@@ -81,7 +69,7 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Proveedores y transferencias">
+      <LegalSection title="4. Proveedores y transferencias">
         <p>
           Para prestar el servicio podemos compartir la información estrictamente necesaria con
           proveedores de infraestructura, alojamiento, tecnología de programas de lealtad,
@@ -95,7 +83,7 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Conservación y seguridad">
+      <LegalSection title="5. Conservación y seguridad">
         <p>
           Conservamos la información durante el tiempo necesario para prestar el servicio, atender
           obligaciones legales, resolver aclaraciones y proteger la operación. Aplicamos medidas
@@ -104,7 +92,7 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="7. Cookies y datos técnicos">
+      <LegalSection title="6. Cookies y datos técnicos">
         <p>
           El sitio puede utilizar cookies técnicas necesarias para recordar preferencias, mantener
           sesiones y proteger el servicio. Si en el futuro incorporamos herramientas de analítica o
@@ -113,7 +101,7 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="8. Tus derechos ARCO">
+      <LegalSection title="7. Tus derechos ARCO">
         <p>
           Puedes solicitar acceso, rectificación, cancelación u oposición respecto de tus datos, así
           como revocar tu consentimiento o limitar su uso. Envía tu solicitud a{" "}
@@ -124,11 +112,20 @@ function PrivacyNotice() {
         </p>
       </LegalSection>
 
-      <LegalSection title="9. Cambios a este aviso">
+      <LegalSection title="8. Cambios a este aviso">
         <p>
           Podemos actualizar este aviso cuando cambien el servicio, los proveedores o las
           obligaciones aplicables. La versión vigente siempre estará disponible en esta página y
           mostrará la fecha de su última actualización.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="9. Responsable y contacto">
+        <p>
+          El responsable del tratamiento de los datos descritos en este aviso es{" "}
+          <strong>Eduardo B Cano</strong>, quien opera Lealtio desde el Estado de México, México.
+          Para solicitudes relacionadas con privacidad puedes escribir a{" "}
+          <a href="mailto:hola@lealtio.com">hola@lealtio.com</a>.
         </p>
       </LegalSection>
     </LegalPage>
