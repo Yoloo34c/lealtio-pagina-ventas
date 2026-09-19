@@ -59,7 +59,7 @@ export function LegalFooter() {
         <a className="legal-footer-contact" href="mailto:hola@lealtio.com">
           Contacto: hola@lealtio.com
         </a>
-        <span>© {new Date().getFullYear()} Lealtio</span>
+        <span>© {new Date().getFullYear()} Lealtio — Fidelización sin fricción.</span>
       </div>
     </footer>
   );

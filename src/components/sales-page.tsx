@@ -734,7 +734,7 @@ export default function SalesPage() {
         </nav>
         <div className="sales-footer-contact">
           <a href="mailto:hola@lealtio.com">Contacto: hola@lealtio.com</a>
-          <span>© {new Date().getFullYear()} Lealtio</span>
+          <span>© {new Date().getFullYear()} Lealtio — Fidelización sin fricción.</span>
         </div>
       </footer>
     </div>
