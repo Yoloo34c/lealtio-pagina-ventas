@@ -1,21 +1,21 @@
 # Lealtio: diagnóstico y nueva página de ventas
 
-Revisión: 9 de septiembre de 2026. Base analizada: página completa del repositorio original, commit `fa24cb4`, oferta confirmada por el propietario y documentación oficial de Boomerangme. El producto vendido es Lealtio para negocios locales; no se ofrece white label ni se añaden funciones nuevas del proveedor.
+Revisión: 9 de septiembre de 2026. Base analizada: página completa del repositorio original, commit `fa24cb4`, oferta confirmada por el propietario y documentación técnica disponible. El producto vendido es Lealtio para negocios locales y no se añaden funciones que no formen parte de la oferta confirmada.
 
 **Actualización posterior:** el copy se ha revisado a partir de los seis libros aportados por el propietario. La estrategia vigente y el nuevo recorrido se explican en [Del problema reconocido a la decisión de probar](./estrategia-copy-libros.md). Este documento conserva el diagnóstico de la primera reconstrucción y las comprobaciones de la oferta.
 
 ## Qué frenaba la venta
 
-| Hallazgo | Efecto en la decisión | Cambio realizado |
-| --- | --- | --- |
-| Los botones de cada plan tenían `href="#"`. | Una persona decidida no podía llegar al alta. | Preparación de enlaces reales por plan y modalidad. Sin un enlace confirmado, la vista previa identifica el registro pendiente y no simula una compra. |
-| Se repetía «vuelven solos» en numerosos bloques. | Más lectura sin responder nuevas preguntas; parecía que el resultado estaba garantizado. | Una promesa principal y una secuencia concreta: recompensa, tarjeta guardada y visita registrada. |
-| «Todo incluido» mezclaba funciones de distintos planes. | El cliente podía esperar referidos, reseñas o recuperación en Impulso. | Identificación visible: funciones comunes, desde Turbo y en Cohete. |
-| `+85%`, `+40%`, `70%` y `4.9★`, además de testimonios «verificados», carecían de respaldo en el material revisado. | Debilitaban la credibilidad y podían crear expectativas indebidas. | Se conservó la prueba social expresamente autorizada: cinco personas y «+50 negocios…». El resto queda fuera hasta confirmar evidencia. No se afirma que sea falso. |
-| Se anunciaba 30% de ahorro uniforme. | El porcentaje no coincidía exactamente con los tres precios anuales. | Ahorro exacto en pesos y total anual visible. |
-| «Cinco minutos» y «diez minutos» se contradecían. | La facilidad de uso parecía una promesa imprecisa. | Tres pasos concretos; no se inventó un tiempo de puesta en marcha. |
-| «Sin ninguna diferencia» entre iPhone y Android; tarjeta que «se guarda sola». | Ocultaba acciones y condiciones necesarias para utilizar el servicio. | Explicación de registro, Wallet, permisos y avisos por cercanía en iPhone. |
-| Título `m`, descripción `y` e idioma inglés. | Presentación descuidada al abrir o compartir la página. | Metadatos de Lealtio e idioma español de México. |
+| Hallazgo                                                                                                           | Efecto en la decisión                                                                    | Cambio realizado                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Los botones de cada plan tenían `href="#"`.                                                                        | Una persona decidida no podía llegar al alta.                                            | Preparación de enlaces reales por plan y modalidad. Sin un enlace confirmado, la vista previa identifica el registro pendiente y no simula una compra.              |
+| Se repetía «vuelven solos» en numerosos bloques.                                                                   | Más lectura sin responder nuevas preguntas; parecía que el resultado estaba garantizado. | Una promesa principal y una secuencia concreta: recompensa, tarjeta guardada y visita registrada.                                                                   |
+| «Todo incluido» mezclaba funciones de distintos planes.                                                            | El cliente podía esperar referidos, reseñas o recuperación en Impulso.                   | Identificación visible: funciones comunes, desde Turbo y en Cohete.                                                                                                 |
+| `+85%`, `+40%`, `70%` y `4.9★`, además de testimonios «verificados», carecían de respaldo en el material revisado. | Debilitaban la credibilidad y podían crear expectativas indebidas.                       | Se conservó la prueba social expresamente autorizada: cinco personas y «+50 negocios…». El resto queda fuera hasta confirmar evidencia. No se afirma que sea falso. |
+| Se anunciaba 30% de ahorro uniforme.                                                                               | El porcentaje no coincidía exactamente con los tres precios anuales.                     | Ahorro exacto en pesos y total anual visible.                                                                                                                       |
+| «Cinco minutos» y «diez minutos» se contradecían.                                                                  | La facilidad de uso parecía una promesa imprecisa.                                       | Tres pasos concretos; no se inventó un tiempo de puesta en marcha.                                                                                                  |
+| «Sin ninguna diferencia» entre iPhone y Android; tarjeta que «se guarda sola».                                     | Ocultaba acciones y condiciones necesarias para utilizar el servicio.                    | Explicación de registro, Wallet, permisos y avisos por cercanía en iPhone.                                                                                          |
+| Título `m`, descripción `y` e idioma inglés.                                                                       | Presentación descuidada al abrir o compartir la página.                                  | Metadatos de Lealtio e idioma español de México.                                                                                                                    |
 
 ## Decisión de copy y diseño
 
@@ -45,24 +45,24 @@ Estos principios orientan la propuesta. No son una validación estadística de s
 
 ## Oferta preservada
 
-| Plan | Mensual | Equivalente mensual con anual | Pago anual | Ahorro frente a 12 mensualidades |
-| --- | ---: | ---: | ---: | ---: |
-| Impulso | $1,499 | $1,049 | $12,588 | $5,400 |
-| Turbo | $2,199 | $1,549 | $18,588 | $7,800 |
-| Cohete | $4,399 | $3,049 | $36,588 | $16,200 |
+| Plan    | Mensual | Equivalente mensual con anual | Pago anual | Ahorro frente a 12 mensualidades |
+| ------- | ------: | ----------------------------: | ---------: | -------------------------------: |
+| Impulso |  $1,499 |                        $1,049 |    $12,588 |                           $5,400 |
+| Turbo   |  $2,199 |                        $1,549 |    $18,588 |                           $7,800 |
+| Cohete  |  $4,399 |                        $3,049 |    $36,588 |                          $16,200 |
 
 Todos los importes están en MXN e incluyen IVA, como en la oferta original. Se preservaron sus 31 renglones de prestaciones. El propietario confirmó que «promociones activas» significa **programas de lealtad activos**: el texto visible aclara ese nombre sin cambiar los límites 1/3/10. Los datos originales quedan conservados para comprobar que la oferta no cambió.
 
 ## Precisiones verificadas del producto
 
-- **Wallet:** el cliente escanea, se registra y añade la tarjeta. No necesita una aplicación de Lealtio; algunos Android necesitan instalar Google Wallet. [Instalación en Android](https://docs.boomerangme.cards/how-to-install-the-card/android/google-pay-on-android), [Ayuda de Google Wallet](https://support.google.com/wallet/answer/11951709?hl=en).
-- **Cercanía:** los avisos por ubicación funcionan en iPhone dentro de 100 m, con permisos habilitados. No alcanzan a cualquier persona que camine cerca del negocio. [Geolocations](https://docs.boomerangme.cards/geolocations/geolocations).
-- **Mensajes:** envío ilimitado no equivale a visualización garantizada. La recepción requiere tarjeta instalada y permisos; Google Wallet limita los avisos visibles. [Recepción de notificaciones](https://docs.boomerangme.cards/push-notifications/how-it-works/why-arent-my-customers-receiving-push-messages).
-- **Escáner:** funciona desde el navegador con cámara o búsqueda del cliente; no se presenta como terminal bancaria. [Instalación del escáner](https://docs.boomerangme.cards/scanner-app/installation).
-- **Reseñas:** se automatiza la solicitud; el cliente decide qué publicar. [Feedback collection](https://docs.boomerangme.cards/push-notifications/push-section/push-automation/feedback-collection).
-- **Recuperación:** recordatorios configurados según la última operación registrada; no retorno garantizado. [Next visit reminder](https://docs.boomerangme.cards/push-notifications/push-section/push-automation/next-visit-reminder).
-- **Referidos:** requieren un programa y condiciones configurados; no todas las mecánicas admiten esta función. [Referral program](https://docs.boomerangme.cards/referral-program/referral-program).
-- **Analítica:** muestra participación y movimientos registrados; no se afirma que mida automáticamente todas las ventas del negocio. [Dashboard](https://docs.boomerangme.cards/dashboard/new-dashboard).
+- **Wallet:** el cliente escanea, se registra y añade la tarjeta. No necesita una aplicación de Lealtio; algunos Android necesitan instalar Google Wallet.
+- **Cercanía:** los avisos por ubicación funcionan en iPhone dentro de 100 m, con permisos habilitados. No alcanzan a cualquier persona que camine cerca del negocio.
+- **Mensajes:** envío ilimitado no equivale a visualización garantizada. La recepción requiere tarjeta instalada y permisos; Google Wallet limita los avisos visibles.
+- **Escáner:** funciona desde el navegador con cámara o búsqueda del cliente; no se presenta como terminal bancaria.
+- **Reseñas:** se automatiza la solicitud; el cliente decide qué publicar.
+- **Recuperación:** recordatorios configurados según la última operación registrada; no retorno garantizado.
+- **Referidos:** requieren un programa y condiciones configurados; no todas las mecánicas admiten esta función.
+- **Analítica:** muestra participación y movimientos registrados; no se afirma que mida automáticamente todas las ventas del negocio.
 
 ## Pendientes que requieren datos del propietario
 

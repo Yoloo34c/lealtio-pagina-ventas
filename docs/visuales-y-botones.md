@@ -46,7 +46,7 @@ La afirmación utilizada es que estas marcas premian las compras con estrellas o
 - [Sephora Rewards México](https://www.sephora.com.mx/beauty-club): puntos por compras y recompensas.
 - [MiMcDonald's México](https://cloud.news.mcdonalds.com.mx/MX_MiMcDonalds): puntos y canje de productos en su programa.
 
-Los nombres ahora son texto plano, sin enlaces externos en la página. Las fuentes quedan únicamente en este documento de trabajo. No se afirma que utilicen Boomerangme o Lealtio, que sean clientes de Lealtio, que exista afiliación ni que su desarrollo cueste una cantidad concreta. Las fuentes revisadas no permiten sostener esas afirmaciones.
+Los nombres ahora son texto plano, sin enlaces externos en la página. Las fuentes quedan únicamente en este documento de trabajo. No se afirma que utilicen Lealtio, que sean clientes de Lealtio, que exista afiliación ni que su desarrollo cueste una cantidad concreta. Las fuentes revisadas no permiten sostener esas afirmaciones.
 
 ## Oferta y comprobaciones
 

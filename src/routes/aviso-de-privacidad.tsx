@@ -72,10 +72,10 @@ function PrivacyNotice() {
       <LegalSection title="4. Proveedores y transferencias">
         <p>
           Para prestar el servicio podemos compartir la información estrictamente necesaria con
-          proveedores de infraestructura, alojamiento, tecnología de programas de lealtad,
-          comunicaciones, billeteras digitales, prevención de fraude y procesamiento de pagos. Estos
-          proveedores pueden incluir, según la modalidad utilizada, a Mercado Pago, Stripe,
-          BoomerangMe, Cloudflare, Apple y Google.
+          proveedores de infraestructura, alojamiento, comunicaciones, billeteras digitales,
+          prevención de fraude, procesamiento de pagos y otros servicios técnicos necesarios para
+          operar Lealtio. Estos proveedores pueden incluir, según la modalidad utilizada, a Mercado
+          Pago, Stripe, Cloudflare, Apple y Google.
         </p>
         <p>
           Algunos proveedores pueden procesar información fuera de México conforme a sus propias
