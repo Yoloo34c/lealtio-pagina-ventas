@@ -77,6 +77,7 @@ export const Route = createRootRouteWithContext<Record<string, never>>()({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "robots", content: "noindex, nofollow" },
       { title: "Lealtio | Más razones para que tus clientes vuelvan a comprar" },
       {
         name: "description",
