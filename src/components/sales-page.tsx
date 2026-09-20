@@ -15,6 +15,7 @@ import {
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { PLANS, formatMXN, getSignupUrl, type BillingPeriod } from "@/lib/lealtio-offer";
 import heroPhones from "@/assets/hero-phones.webp";
+import heroPhonesSmall from "@/assets/hero-phones-600.webp";
 
 import avatar1 from "@/assets/avatars/avatar-1.webp";
 import avatar2 from "@/assets/avatars/avatar-2.webp";
@@ -612,8 +613,9 @@ export default function SalesPage() {
               className="sales-logo"
               src="/lealtio-logo.webp"
               alt="Lealtio"
-              width={600}
-              height={300}
+              width={300}
+              height={150}
+              decoding="async"
             />
           </a>
           <nav aria-label="Navegación principal">
@@ -661,7 +663,7 @@ export default function SalesPage() {
             <div className="sales-social">
               <div className="sales-avatars">
                 {avatars.map((src) => (
-                  <img key={src} src={src} alt="" width={44} height={44} />
+                  <img key={src} src={src} alt="" width={44} height={44} decoding="async" />
                 ))}
               </div>
               <p>
@@ -677,9 +679,12 @@ export default function SalesPage() {
             <img
               className="sales-hero-phones"
               src={heroPhones}
+              srcSet={`${heroPhonesSmall} 600w, ${heroPhones} 900w`}
+              sizes="(max-width: 760px) calc(100vw - 80px), 540px"
               alt="Ejemplos de tarjetas de lealtad para una clínica dental y una barbería, con sellos y recompensas en el celular"
-              width={912}
-              height={944}
+              width={900}
+              height={941}
+              loading="eager"
               fetchPriority="high"
             />
             <figcaption>
@@ -721,9 +726,10 @@ export default function SalesPage() {
               className="sales-logo"
               src="/lealtio-logo.webp"
               alt="Lealtio"
-              width={600}
-              height={300}
+              width={300}
+              height={150}
               loading="lazy"
+              decoding="async"
             />
           </a>
         </div>

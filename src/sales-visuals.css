@@ -289,7 +289,7 @@
 .lv2-camera-backdrop {
   position: absolute;
   inset: 0;
-  background: url("/scenes/mostrador-lealtio.png") center/cover;
+  background: url("/scenes/mostrador-lealtio.webp") center/cover;
 }
 .lv2-viewfinder .lv2-qr {
   position: relative;
@@ -521,7 +521,7 @@
   top: -15px;
   width: 518px;
   height: 79px;
-  background: url("./assets/wallet-badges.png") no-repeat;
+  background: url("./assets/wallet-badges.webp") no-repeat;
   background-size: 518px 79px;
   content: "";
 }

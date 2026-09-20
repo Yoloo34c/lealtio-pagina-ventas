@@ -284,6 +284,8 @@
 }
 .sales-section {
   padding-block: var(--sales-space);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
 .sales-page h2 {
   font-size: clamp(2rem, 3.8vw, 3.1rem);

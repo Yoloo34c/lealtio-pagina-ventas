@@ -16,7 +16,7 @@ export function LegalPage({
       <header className="legal-header">
         <div className="legal-wrap legal-nav">
           <a href="/" aria-label="Lealtio, volver al inicio">
-            <img src="/lealtio-logo.webp" alt="Lealtio" width={600} height={300} />
+            <img src="/lealtio-logo.webp" alt="Lealtio" width={300} height={150} decoding="async" />
           </a>
           <a className="legal-back" href="/">
             Volver a Lealtio
@@ -54,7 +54,14 @@ export function LegalFooter() {
     <footer className="legal-footer">
       <div className="legal-wrap">
         <div className="legal-footer-brand">
-          <img src="/lealtio-logo.webp" alt="Lealtio" width={600} height={300} loading="lazy" />
+          <img
+            src="/lealtio-logo.webp"
+            alt="Lealtio"
+            width={300}
+            height={150}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <a className="legal-footer-contact" href="mailto:hola@lealtio.com">
           Contacto: hola@lealtio.com

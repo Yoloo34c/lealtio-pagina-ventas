@@ -25,16 +25,20 @@ import {
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const STAMP_CARD = "/cards/sellos.png";
+const STAMP_CARD = "/cards/sellos.webp";
 
 function CardImage({ src = STAMP_CARD, alt = "" }: { src?: string; alt?: string }) {
+  const smallSrc = src.replace(/\.webp$/, "-256.webp");
+
   return (
     <img
       className="lv2-card-image"
       src={src}
+      srcSet={`${smallSrc} 256w, ${src} 512w`}
+      sizes="(max-width: 760px) 180px, 230px"
       alt={alt}
-      width={744}
-      height={1110}
+      width={512}
+      height={767}
       loading="lazy"
       decoding="async"
     />
@@ -175,11 +179,12 @@ function JoinScene() {
     >
       <img
         className="lv2-counter"
-        src="/scenes/mostrador-lealtio.png"
+        src="/scenes/mostrador-lealtio.webp"
         alt=""
-        width={1536}
-        height={1024}
+        width={900}
+        height={600}
         loading="lazy"
+        decoding="async"
       />
       <div className="lv2-qr-stand">
         <span>VOLVER TIENE PREMIO</span>
@@ -377,7 +382,7 @@ const CARD_EXAMPLES = [
     id: "puntos",
     name: "Puntos",
     icon: Sparkles,
-    src: "/cards/puntos.png",
+    src: "/cards/puntos.webp",
     business: "CAFETERÍAS · SPAS · RESTAURANTES",
     title: "Haz que cada compra le deje ganas de alcanzar la siguiente.",
     text: "Cada compra suma puntos para canjear por las recompensas que tú elijas. Tu cliente ve cuánto lleva y cuánto le falta: el progreso le recuerda que contigo ya tiene algo ganado.",
@@ -391,7 +396,7 @@ const CARD_EXAMPLES = [
     id: "cashback",
     name: "Cashback",
     icon: Coins,
-    src: "/cards/cashback.png",
+    src: "/cards/cashback.webp",
     business: "RESTAURANTES · TIENDAS · NEGOCIOS LOCALES",
     title: "Que su próxima compra se quede en tu negocio.",
     text: "Devuelve un porcentaje de cada compra como saldo para gastar en tu negocio. Ese es el cashback: una parte de lo que pagó se convierte en una razón para comprarte de nuevo.",
@@ -405,7 +410,7 @@ const CARD_EXAMPLES = [
     id: "membresia",
     name: "Membresía",
     icon: Crown,
-    src: "/cards/membresia.png",
+    src: "/cards/membresia.webp",
     business: "GIMNASIOS · CLUBES · SPAS",
     title: "Haz que ser de los tuyos tenga sus privilegios.",
     text: "Dale una tarjeta de miembro con su nombre, nivel y vigencia. El acceso o los beneficios que tú elijas hacen visible ese trato especial por pertenecer a tu negocio.",
@@ -419,7 +424,7 @@ const CARD_EXAMPLES = [
     id: "descuento",
     name: "Descuento",
     icon: Percent,
-    src: "/cards/descuento.png",
+    src: "/cards/descuento.webp",
     business: "BOUTIQUES · TIENDAS · SALONES",
     title: "Da un trato especial sin poner todo tu negocio en oferta.",
     text: "Ofrece a tus clientes un descuento que puedan usar al volver. Lo llevan en su tarjeta: un trato especial que les recuerda por qué les conviene seguir eligiéndote.",
@@ -433,7 +438,7 @@ const CARD_EXAMPLES = [
     id: "cupon",
     name: "Cupón",
     icon: Ticket,
-    src: "/cards/cupon.png",
+    src: "/cards/cupon.webp",
     business: "HELADERÍAS · RESTAURANTES · COMERCIOS",
     title: "Dale un motivo para venir hoy, en vez de dejarlo para después.",
     text: "Una oferta de bienvenida o un beneficio especial puede darle el empujón para probarte. Guarda el cupón en su celular y lo canjea en tu negocio dentro del plazo que tú decidas.",
@@ -447,7 +452,7 @@ const CARD_EXAMPLES = [
     id: "prepago",
     name: "Prepago",
     icon: Layers,
-    src: "/cards/prepago.png",
+    src: "/cards/prepago.webp",
     business: "YOGA · GIMNASIOS · CLASES · SERVICIOS",
     title: "Cobra hoy las próximas visitas.",
     text: "Tu cliente te paga por adelantado un paquete: 10 clases, 10 cortes o 10 sesiones, por ejemplo. Cada vez que viene, descuentas una de su tarjeta. Tú ya cobraste; él tiene visitas pagadas por disfrutar.",
@@ -461,7 +466,7 @@ const CARD_EXAMPLES = [
     id: "regalo",
     name: "Regalo",
     icon: Gift,
-    src: "/cards/regalo.png",
+    src: "/cards/regalo.webp",
     business: "SPAS · SALONES · TIENDAS · RESTAURANTES",
     title: "Que alguien regale tu negocio y otro venga a descubrirlo.",
     text: "Un cliente te compra saldo para regalar una comida, un tratamiento o una compra. Quien recibe la tarjeta tiene ese saldo para disfrutar contigo: una nueva oportunidad de enamorarlo de tu negocio.",

@@ -7,6 +7,13 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    build: {
+      // Keep small raster assets out of the JavaScript bundle so the browser can decode them
+      // independently and cache them without making React's initial parse more expensive.
+      assetsInlineLimit: 0,
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
